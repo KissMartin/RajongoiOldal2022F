@@ -37,3 +37,9 @@ body{
     box-shadow: 0 10px 45px -10px rgb(255 111 111 / 15%), 0 0 20px -10px rgb(255 111 111 / 35%), 0 10px 30px -10px rgb(255 111 111 / 25%);
 
 }
+
+.arcanePicture{
+    margin: auto;
+    display: block;
+    background-size: cover;
+}
