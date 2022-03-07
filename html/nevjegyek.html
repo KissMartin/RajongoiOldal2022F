@@ -14,12 +14,38 @@
 </head>
 
 <body>
-  <div id="Navbar"></div>
-  <script>
-      $.get("nav.html", function(data){
-          $("#Navbar").replaceWith(data);
-      });
-  </script> 
+    <div id="Navbar"></div>
+    <script>
+        $.get("nav.html", function (data) {
+            $("#Navbar").replaceWith(data);
+        });
+    </script>
+        <div class="card-deck container">
+            <div class="row">
+                <div class="col-12 col-md-6 my-3">
+                    <div class="h-100 mx-1">
+                        <div class="card px-2">
+                            <img src="..." class="card-img-top" alt="Marcell képe">
+                            <div class="card-body">
+                                <h5 class="card-title">Geher Marcell</h5>
+                                <p class="card-text">Mintaszöveg</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-12 col-md-6 my-3">
+                    <div class="h-100 mx-1">
+                        <div class="card px-2">
+                            <img src="..." class="card-img-top" alt="Martin képe">
+                            <div class="card-body">
+                                <h5 class="card-title">Kiss Martin</h5>
+                                <p class="card-text">Mintaszöveg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
