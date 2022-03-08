@@ -14,38 +14,61 @@
 </head>
 
 <body>
-    <div id="Navbar"></div>
-    <script>
-        $.get("nav.html", function (data) {
-            $("#Navbar").replaceWith(data);
-        });
-    </script>
-        <div class="card-deck container">
-            <div class="row">
-                <div class="col-12 col-md-6 my-3">
-                    <div class="h-100 mx-1">
-                        <div class="card px-2">
-                            <img src="..." class="card-img-top" alt="Marcell képe">
-                            <div class="card-body">
-                                <h5 class="card-title">Geher Marcell</h5>
-                                <p class="card-text">Mintaszöveg</p>
-                            </div>
+    <!--Navbar-->
+    <nav class="navbar bg-color-riot navbar-light navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="/pictures/riot icon.png" alt="Riot logo" id="riotLogo"><span id="logoName">Riot Games</span></a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link navButtons" href="lol.html">League of Legends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navButtons" href="valorant.html">Valorant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navButtons" href="arcane.html">Arcane</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navButtons" href="form.html">Kérdőív</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navButtons active" href="nevjegyek.html">Névjegyek</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card-deck container">
+        <div class="row">
+            <div class="col-12 col-md-6 my-3">
+                <div class="h-100 mx-1">
+                    <div class="card px-2">
+                        <img src="..." class="card-img-top" alt="Marcell képe">
+                        <div class="card-body">
+                            <h5 class="card-title">Geher Marcell</h5>
+                            <p class="card-text">Mintaszöveg</p>
                         </div>
-                    </div>  
+                    </div>
                 </div>
-                <div class="col-12 col-md-6 my-3">
-                    <div class="h-100 mx-1">
-                        <div class="card px-2">
-                            <img src="..." class="card-img-top" alt="Martin képe">
-                            <div class="card-body">
-                                <h5 class="card-title">Kiss Martin</h5>
-                                <p class="card-text">Mintaszöveg</p>
-                            </div>
+            </div>
+            <div class="col-12 col-md-6 my-3">
+                <div class="h-100 mx-1">
+                    <div class="card px-2">
+                        <img src="..." class="card-img-top" alt="Martin képe">
+                        <div class="card-body">
+                            <h5 class="card-title">Kiss Martin</h5>
+                            <p class="card-text">Mintaszöveg</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
