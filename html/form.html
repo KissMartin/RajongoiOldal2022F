@@ -9,6 +9,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="projektmunka.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>Kérdőív</title>
 </head>
@@ -42,6 +43,93 @@
             </div>
         </div>
     </nav>
+
+    <div class="form-holder position-relative text-white">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <input id="username" type="text" placeholder="Felhasználónév" class="mb-3"><br>
+            <label id="error_comment" for="comment" class="text-danger">Üres megjegyzés!</label><br>
+            <textarea id="comment" name="comment" cols="30" rows="5" placeholder="*Megjegyzés" maxlength="250"></textarea><br>
+            <a class="float-end form-counter text-white"><span id="current_count">0</span>/<span id="max_count">250</span></a><br>
+            <div class="text-center">
+                <button id="send" class="btn btn-success mt-4">Küldés</button>
+                <button id="delete" class="btn btn-danger ms-3 mt-4">Törlés</button>
+            </div>
+        </div>
+    </div>
 </body>
+
+<style>
+    .form-counter{
+        text-decoration: none;
+    }
+    .form-holder{
+        width:100%;
+        height:200px;
+        margin-top: 100px;
+    }
+    textarea[placeholder="*Megjegyzés"]{
+        resize: none;
+    }
+    input[placeholder="Felhasználónév"],
+    textarea[placeholder="*Megjegyzés"]{
+        outline: none;
+        width: 30vw;
+    }
+    label[for="comment"]{
+        display: none;
+        font-size: small;
+    }
+    @media screen and (max-width: 991px) {
+        input[placeholder="Felhasználónév"],
+        textarea[placeholder="*Megjegyzés"]{
+            outline: none;
+            width: 40vw;
+        }
+    }
+</style>
+
+<script>
+    var username = document.getElementById("username");
+    var error_comment = document.getElementById("error_comment");
+    var comment = document.getElementById("comment");
+    var current_count_text = document.getElementById("current_count");
+    var max_count_text = document.getElementById("max_count");
+    
+    comment.addEventListener("input", event => { //Egy figyelő ami figyeli ha input történik a comment mezőben (írás, törlés)
+        countText(event.currentTarget);
+    });
+
+    function countText(textarea){ //Megszámolja hogy mennyi karakter van a comment mezőben
+        var maxcount = textarea.getAttribute("maxlength");
+        var currentcount = textarea.value.length;
+        current_count_text.innerHTML = currentcount;
+    }
+
+    $('#send').click(function (e) { //Ha megnyomom a send gombot
+        var rawData = { //Formázatlan adat, a felhaszálónév és a comment mező értékei
+            name: username.value,
+            comment: comment.value
+        };
+
+        var formedData = JSON.stringify(rawData); //Formázza az adatot hogy JSON legyen belőle
+
+        $.ajax({ //AJAX request
+            url: 'https://darking.cf/ProjectMunka/comment.php', //Az URL ahonnan kérem az adatot
+            type: 'post', //A kérés módja (POST = rejtett, GET = látható)
+            dataType: 'json', //A küldött adat formája json
+            data: {commentData: formedData}, //Az adat amit küldök commentData néven
+            success: function(response){ //Ha kapok választ ...
+                if(response == "empty"){
+                    error_comment.style.display = "inline";
+                    return;
+                }
+                error_comment.style.display = "none";
+                console.log("name: " + response['name']);
+                console.log("comment: " + response['comment']);
+            }
+        });
+    });
+
+</script>
 
 </html>
