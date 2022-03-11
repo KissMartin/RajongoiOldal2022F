@@ -47,8 +47,61 @@ body {
     0 10px 30px -10px rgb(111 111 255 / 25%);
 }
 
-.arcanePicture {
-  margin: auto;
-  display: block;
-  background-size: cover;
+.Arcane_img {
+  width: 100%;
+  z-index: 0;
 }
+
+.arcaneBg {
+  position: relative;
+  overflow: hidden;
+}
+
+.arcaneBgShadow {
+  top: 0;
+  position: absolute;
+  height: 110.5%;
+  bottom: 0;
+  right: -200px;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #181818 10%,
+    rgba(23, 23, 23, 0.98) 20%,
+    rgba(23, 23, 23, 0.97) 25%,
+    rgba(23, 23, 23, 0.95) 35%,
+    rgba(23, 23, 23, 0.94) 40%,
+    rgba(23, 23, 23, 0.92) 45%,
+    rgba(23, 23, 23, 0.9) 50%,
+    rgba(23, 23, 23, 0.87) 55%,
+    rgba(23, 23, 23, 0.82) 60%,
+    rgba(23, 23, 23, 0.75) 65%,
+    rgba(23, 23, 23, 0.63) 70%,
+    rgba(23, 23, 23, 0.45) 75%,
+    rgba(23, 23, 23, 0.27) 80%,
+    rgba(23, 23, 23, 0.15) 85%,
+    rgba(23, 23, 23, 0.08) 90%,
+    rgba(23, 23, 23, 0.03) 95%,
+    rgba(23, 23, 23, 0) 100%
+  );
+}
+
+@media screen and (max-width: 991px) {
+  .navbarResponziv {
+    padding-left: 20px !important;
+  }
+  [aria-current="page"] {
+    display: inline-block;
+    padding-right: 20px !important;
+  }
+  .navButtons:hover {
+    display: inline-block;
+    padding-right: 20px !important;
+  }
+}
+
+.contentBg {
+  background-color: black;
+  height: 64.4vh;
+}
+
