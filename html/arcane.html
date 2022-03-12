@@ -11,24 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>Arcane</title>
-    <style>
-        .teszt1 {
-            padding: 16vw 0 0 50px;
-            width: 400px;
-            display: block;
-        }
-
-        .slideshowCostu {
-            width: 10vw;
-            height: 40vw;
-        }
-
-        .tableCostu{
-            border: 1px solid #f9f9f9;
-            width: 100%;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -64,7 +46,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="arcaneBgShadow col-6">
-                    <img src="/pictures/Arcane-Emblem.png" alt="Arcane logo" class="teszt1">
+                    <img src="/pictures/Arcane-Emblem.png" alt="Arcane logo" class="pictureResize">
                 </div>
                 <div class="col-6">
                 </div>
@@ -74,77 +56,68 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-7">
-                <h2 class="pt-6">Rövid tartalom</h2>
+            <div class="col-7 contentResize">
+                <h2 class="pt-2">Rövid tartalom</h2>
                 <p class="pt-3 fs-6">A League of Legends mögötti világra épülő Arcane belemerül a kényes egyensúlyba Piltover Crest gazdag, utópisztikus városa icon.png Piltover és a Zaun Crest elnyomott földalatti ikonja.png Zaun között. A Runeterra-szerte a "haladás városaként" ismert városokat a legragyogóbb elmék közül sokan otthonuknak nevezik. De a hextech létrehozása, amely egy módja annak, hogy bárki irányítsa a mágikus energiát, veszélyezteti ezt az egyensúlyt. A történet két ikonikus Liga-bajnok eredetét követi nyomon és azt az erőt, amely elszakítja őket egymástól. Az alapjául szolgáló játékhoz hasonlóan az Arcane is a „16+” közönséget célozza meg, és több felnőtt témával foglalkozik majd.</p>
             </div>
-            <div class="col-5">
+            <!--Táblázat-->
+            <div class="col-5 tableResize">
                 <table class="tableCostu">
                     <tr>
-                        <th>Epizód</th>
+                        <th>Epizódok</th>
                         <th>Címe</th>
-                        <th>-</th>
-                        <th>-</th>
+                        <th>Megjelenési dátum</th>
                     </tr>
                     <tr>
                         <td>1.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>Üdv a játszótéren</td>
+                        <td>2021, November 6</td>
                     </tr>
                     <tr>
                         <td>2.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>Pár rejtély jobb, ha megoldatlan marad</td>
+                        <td>2021, November 6</td>
                     </tr>
                     <tr>
                         <td>3.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>A változáshoz szükséges aljas erőszak</td>
+                        <td>2021, November 6</td>
                     </tr>
                     <tr>
                         <td>4.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>Boldog Fejlődés napját!</td>
+                        <td>2021, November 13</td>
                     </tr>
                     <tr>
                         <td>5.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>Mindenki ellenem akar indulni</td>
+                        <td>2021, November 13</td>
                     </tr>
                     <tr>
                         <td>6.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>Amikor a falak leomlanak</td>
+                        <td>2021, November 13</td>
                     </tr>
                     <tr>
                         <td>7.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>A megmentő</td>
+                        <td>2021, November 20</td>
                     </tr>
                     <tr>
                         <td>8.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>Olaj és víz</td>
+                        <td>2021, November 20</td>
                     </tr>
                     <tr>
                         <td>9.</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>A szörny, akit teremtettél</td>
+                        <td>2021, November 20</td>
                     </tr>
                 </table>
             </div>
             <!-- Slideshow -->
             <div>
-                <div class="col-7">
+                <div class="col-8 mx-auto py-3">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
