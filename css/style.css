@@ -124,7 +124,7 @@ table, th, td{
 
 @media screen and (max-width: 750px) {
   .contentResize{
-      min-width: 500px;
+      max-width: 600px;
       width: 100%;
   }
   .pictureResize{
@@ -133,5 +133,8 @@ table, th, td{
   .tableResize{
       width: 100%;
   }
-  
+  .slideShowResize{
+    width: 85%;
+    height: 50%;
+  }
 }
