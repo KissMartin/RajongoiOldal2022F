@@ -134,6 +134,10 @@
         max_count_text.innerHTML = maxcount;
     }
 
+    $('#delete').click(function (e) {
+        clearForm();
+    });
+
     $('#send').click(function (e) { //Ha megnyomom a send gombot
         var rawData = { //Formázatlan adat, a felhaszálónév és a comment mező értékei
             name: username.value,
@@ -144,6 +148,7 @@
 
         $.ajax({ //AJAX request
             url: 'https://darking.cf/ProjectMunka/writeComment.php', //Az URL ahonnan kérem az adatot
+            //url: '../php/writeComment.php',
             type: 'post', //A kérés módja (POST = rejtett, GET = látható)
             dataType: 'json', //A küldött adat formája json
             data: {commentData: formedData}, //Az adat amit küldök commentData néven
@@ -169,6 +174,7 @@
     function updateComments(){
         $.ajax({ //AJAX request
             url: 'https://darking.cf/ProjectMunka/readComment.php', //Az URL ahonnan kérem az adatot
+            //url: '../php/readComment.php',
             type: 'post', //A kérés módja (POST = rejtett, GET = látható)
             dataType: 'json', //A küldött adat formája json
             data: {commentData: ""}, //Az adat amit küldök commentData néven
@@ -188,7 +194,7 @@
     function clearForm(){
         username.value = "";
         commentArea.value = "";
-        current_count_text = "0";
+        current_count_text.innerText = "0";
     }
 </script>
 
