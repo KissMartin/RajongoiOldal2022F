@@ -9,11 +9,12 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="projektmunka.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>Kérdőív</title>
 </head>
 
-<body>
+<body onload="updateComments()">
     <!--Navbar-->
     <nav class="navbar navbarBg navbar-dark navbar-expand-lg">
         <div class="container-fluid">
@@ -42,6 +43,107 @@
             </div>
         </div>
     </nav>
+
+    <div class="form-holder position-relative text-white">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <h1 class="text-center mb-4">Megjegyzés</h1>
+            <input id="username" type="text" placeholder="Felhasználónév" class="mb-3"><br>
+            <label id="error_comment" for="comment" class="text-danger">Üres megjegyzés!</label><br>
+            <textarea id="commentArea" name="comment" cols="30" rows="5" placeholder="*Megjegyzés" maxlength="250"></textarea><br>
+            <a class="float-end form-counter text-white"><span id="current_count">0</span>/<span id="max_count">250</span></a><br>
+            <div class="text-center">
+                <button id="send" class="btn btn-success mt-4">Küldés</button>
+                <button id="delete" class="btn btn-danger mt-4" style="margin-left: 1vw;">Törlés</button>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="comments" id="comments">
+    </div>
 </body>
+
+<script>
+    var username = document.getElementById("username");
+    var error_comment = document.getElementById("error_comment");
+    var commentArea = document.getElementById("commentArea");
+    var current_count_text = document.getElementById("current_count");
+    var max_count_text = document.getElementById("max_count");
+
+    var comments = document.getElementById("comments");
+    
+    commentArea.addEventListener("input", event => { //Egy figyelő ami figyeli ha input történik a comment mezőben (írás, törlés)
+        countText(event.currentTarget);
+    });
+
+    function countText(textarea){ //Megszámolja hogy mennyi karakter van a comment mezőben
+        var maxcount = textarea.getAttribute("maxlength");
+        var currentcount = textarea.value.length;
+        current_count_text.innerHTML = currentcount;
+        max_count_text.innerHTML = maxcount;
+    }
+
+    $('#delete').click(function (e) {
+        clearForm();
+    });
+
+    $('#send').click(function (e) { //Ha megnyomom a send gombot
+        var rawData = { //Formázatlan adat, a felhaszálónév és a comment mező értékei
+            name: username.value,
+            comment: commentArea.value
+        };
+        
+        var formedData = JSON.stringify(rawData); //Formázza az adatot hogy JSON legyen belőle
+
+        $.ajax({ //AJAX request
+            url: 'https://darking.cf/ProjectMunka/writeComment.php', //Az URL ahonnan kérem az adatot
+            //url: '../php/writeComment.php',
+            type: 'post', //A kérés módja (POST = rejtett, GET = látható)
+            dataType: 'json', //A küldött adat formája json
+            data: {commentData: formedData}, //Az adat amit küldök commentData néven
+            success: function(response){ //Ha kapok választ ...
+                if(response == "empty"){
+                    error_comment.style.display = "inline";
+                    error_comment.innerText = "Üres megjegyzés!";
+                    return;
+                }
+                else if(response == "hiba"){
+                    error_comment.style.display = "inline";
+                    error_comment.innerText = "Hiba! Próbálja meg újra";
+                    return;
+                }
+                else{ 
+                    clearForm();
+                    updateComments();
+                }
+            }
+        });
+    }); 
+
+    function updateComments(){
+        $.ajax({ //AJAX request
+            url: 'https://darking.cf/ProjectMunka/readComment.php', //Az URL ahonnan kérem az adatot
+            //url: '../php/readComment.php',
+            type: 'post', //A kérés módja (POST = rejtett, GET = látható)
+            dataType: 'json', //A küldött adat formája json
+            data: {commentData: ""}, //Az adat amit küldök commentData néven
+            success: function(response){ //Ha kapok választ ...
+                error_comment.style.display = "none";
+                var text = response.replace(", ]", "]");
+                text = JSON.parse(text);
+                
+                comments.innerHTML = "";
+                for(let i = 0; i < text.length; i++){
+                    comments.innerHTML += '<div class="border-white border border-1 p-4 mb-4 text-white"><h3>'+ text[i].name +'</h3><p>'+ text[i].comment +'</p></div>';
+                }
+            }
+        });
+    }
+
+    function clearForm(){
+        username.value = "";
+        commentArea.value = "";
+        current_count_text.innerText = "0";
+    }
+</script>
 
 </html>
