@@ -147,14 +147,16 @@ label[for="comment"]{
 @media screen and (max-width: 991px) {
   input[placeholder="Felhasználónév"],
   textarea[placeholder="*Megjegyzés"]{
-      outline: none;
-      width: 40vw;
+    outline: none;
+    width: 40vw;
   }
   .comments{
-      width:70%;
+    width:70%;
   }
   .spacer{
-      width: 80%;
+    width: 80%;
+  }
+}
 
 .slideshowCostu {
   width: 10vw;
