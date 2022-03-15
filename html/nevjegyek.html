@@ -45,24 +45,28 @@
 
     <div class="card-deck container">
         <div class="row">
-            <div class="col-12 col-md-6 my-3">
-                <div class="h-100 mx-1">
-                    <div class="card px-2">
-                        <img src="..." class="card-img-top" alt="Marcell képe">
-                        <div class="card-body">
-                            <h5 class="card-title">Geher Marcell</h5>
-                            <p class="card-text">Mintaszöveg</p>
+            <div class="col-md-6 my-3">
+                <div class="card bg-dark">
+                    <div class="card-body text-white position-relative overflow-hidden">
+                        <img src="/pictures/Marcell.png" class="card-img-top" alt="Marcell képe">
+                        <div class="title position-absolute">
+                            <h5 class="card-title">Gehér Marcell</h5>
+                        </div>
+                        <div class="text position-absolute">
+                            <p class="card-text">Epik programozó és a hexagonium készítője</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 my-3">
-                <div class="h-100 mx-1">
-                    <div class="card px-2">
-                        <img src="..." class="card-img-top" alt="Martin képe">
-                        <div class="card-body">
+            <div class="col-md-6 my-3">
+                <div class="card bg-dark">
+                    <div class="card-body text-white position-relative overflow-hidden">
+                        <img src="/pictures/Martin.png" class="card-img-top" alt="Marcell képe">
+                        <div class="title position-absolute">
                             <h5 class="card-title">Kiss Martin</h5>
-                            <p class="card-text">Mintaszöveg</p>
+                        </div>
+                        <div class="text position-absolute">
+                            <p class="card-text">Epik ember</p>
                         </div>
                     </div>
                 </div>
@@ -71,4 +75,32 @@
     </div>
 </body>
 
+<style>
+    .card-body{
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+    .card-img-top{
+        width: 30vw;
+    }
+    .title{
+        top:85%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 30.05vw;
+        background-color: rgba(0,0,0,0.65);
+    }
+    .text{
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30.05vw;
+        background-color: rgba(0,0,0,0.65);
+        font-size: small;
+    }
+    .card-title{
+        margin: 0;
+    }
+</style>
 </html>
