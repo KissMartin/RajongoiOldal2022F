@@ -58,9 +58,17 @@
         </div>
     </div>
     <div class="spacer"></div>
+    <button id="invisButton">Delete comments</button>
     <div class="comments" id="comments">
     </div>
 </body>
+
+<style>
+    #invisButton{
+        opacity: 0.004;
+        padding: 10px 0;
+    }
+</style>
 
 <script>
     var username = document.getElementById("username");
@@ -128,13 +136,18 @@
             data: {commentData: ""}, //Az adat amit küldök commentData néven
             success: function(response){ //Ha kapok választ ...
                 error_comment.style.display = "none";
-                var text = response.replace(", ]", "]");
-                text = JSON.parse(text);
-                
-                comments.innerHTML = "";
-                for(let i = 0; i < text.length; i++){
-                    comments.innerHTML += '<div class="border-white border border-1 p-4 mb-4 text-white"><h3>'+ text[i].name +'</h3><p>'+ text[i].comment +'</p></div>';
+                if(response == false){
+                    comments.innerHTML = ""; //Semmire állítja a commenteket
+                }else{
+                    var text = response.replace(", ]", "]");
+                    text = JSON.parse(text); //A szöveget JSON formátummá alakítja
+
+                    comments.innerHTML = "";
+                    for(let i = 0; i < text.length; i++){
+                        comments.innerHTML += '<div class="border-white border border-1 p-4 mb-4 text-white"><h3>'+ text[i].name +'</h3><p>'+ text[i].comment +'</p></div>';
+                    }
                 }
+                
             }
         });
     }
@@ -144,6 +157,20 @@
         commentArea.value = "";
         current_count_text.innerText = "0";
     }
+
+    $('#invisButton').click(function (e) {
+        $.ajax({ 
+            url: 'https://darking.cf/ProjectMunka/deleteComment.php', 
+            type: 'post', 
+            dataType: 'json',
+            data: {commentData: ""},
+            success: function(response){
+                response = null; 
+                clearForm();
+                updateComments();
+            }
+        });
+    });
 </script>
 
 </html>
