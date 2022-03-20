@@ -47,7 +47,7 @@
 
     <div class="card-deck container">
         <div class="row">
-            <div class="col-12 col-md-6 my-3">
+            <div class="col-10 col-md-5 my-3">
                 <div class="h-100 mx-1">
                     <div class="card px-2 bg-dark">
                         <img src="/pictures/Marcell.png" class="card-img-top" alt="Marcell képe">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 my-3">
+            <div class="col-10 col-md-5 my-3">
                 <div class="h-100 mx-1">
                     <div class="card px-2 bg-dark">
                         <img src="/pictures/Martin.png" class="card-img-top" alt="Martin képe">
@@ -78,48 +78,43 @@
                 </div>
             </div>
         </div>
-        <div class="text-center">
-            <a class="to-form-button">Hagyj egy megjegyzést!</a>
+        <div class="text-center pt-5">
+            <a class="to-form-button" href="/html/form.html">Hagyj egy megjegyzést!</a>
         </div>
     </div>
 </body>
 
 <style>
+    .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+    }
     .to-form-button{
         text-decoration: none;
-        padding: 10px 5px;
+        font-size: 1.2em;
+        padding: 10px 20px;
         color: #f9f9f9;
         display: inline-block;
-        background: linear-gradient(135deg, #a32629 0, #d53235 100%);
+        background-color: #a32629;
         box-shadow: 0 10px 45px -10px rgb(255 111 111 / 15%),
             0 0 20px -10px rgb(255 111 111 / 35%),
             0 10px 30px -10px rgb(255 111 111 / 25%);
         border-radius: 20px;
         cursor: pointer;
-        transition: .5s background-color ease;
+        transition: .25s all ease;
+        margin-bottom: 50px;
     }
     .to-form-button:hover{
         color: inherit;
-        background: linear-gradient(135deg, #3226a3 0, #5032d5 100%) !important;
+        background-color: #5032d5 !important;
+        box-shadow: 0 10px 45px -10px rgb(111 111 255 / 15%),
+        0 0 20px -10px rgb(111 111 255 / 35%),
+        0 10px 30px -10px rgb(111 111 255 / 25%) !important
     }
-    /*
-    @keyframes changeBackground{
-        0%{
-            background: linear-gradient(135deg, #a32629 0, #d53235 100%);
-        }
-        100%{
-            background: linear-gradient(135deg, #3226a3 0, #5032d5 100%) !important;
-        }
-    }
-    */
-    /* 
-    .card{
-        background-color: inherit !important;
-        box-shadow: 0 10px 45px -10px rgb(255 111 111 / 15%),
-        0 0 20px -10px rgb(255 111 111 / 35%),
-        0 10px 30px -10px rgb(255 111 111 / 25%);
-    }
-    */
     a[target="_blank"]{
         text-decoration: none;
         color: inherit;
