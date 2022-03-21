@@ -235,3 +235,6 @@ a[target="_blank"]:hover {
   -webkit-background-clip: text;
   background-clip: unset;
 }
+.marginLeft{
+  margin-left: 1vw;
+}
