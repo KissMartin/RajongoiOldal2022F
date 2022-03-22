@@ -63,8 +63,10 @@
   <div class="main-games mt-5" id="main-content">
     <h1 class="ms-5 mb-5 ps-5 pt-5">Játékaink</h1>
     <div class="row text-center">
-      <div class="col-10 col-md-5 me-3">
+      <div class="col-10 col-md-5 me-3 main-games-card">
         <img src="https://www.riotgames.com/darkroom/855/eea552a09c8074c6041b970449f529a6:01cd382480eb2f754ed9e93cdeb843db/lol-card-bg-1800.jpg" alt="Lol-png">
+        <img src="https://www.riotgames.com/darkroom/350/a28dfa2308a772466c7d2018a87ac000:0e9fb5e8f3944bcd4375d6960d21962e/lol-logotype.png" alt="Strategic tatcital" class="main-games-logo">
+        <p class="main-games-card-desc">A híres taktikai csapatjáték</p>
       </div>
       <div class="col-10 col-md-5 ms-3 main-games-card">
         <img src="https://www.riotgames.com/darkroom/855/68fabc637b1780aa32517a812189e6bb:3498339839ce6725c201a76c86df0b37/val-card-bg-e4a2.jpg" alt="">
@@ -95,6 +97,7 @@
   .main-games {
     width: 100%;
     height: 60vh;
+    background-color: darkmagenta;
   }
 
   .main-games-card {
@@ -112,14 +115,10 @@
   .main-games-card-desc {
     position: absolute;
     top: 80%;
-    left: 3vw;
+    left: 2vw;
     transform: translateY(-50%);
     width: 10vw;
     font-size: 0.8vw !important;
-  }
-
-  .main-games {
-    background-color: palevioletred;
   }
 
   .row {
