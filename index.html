@@ -10,7 +10,7 @@
   <script src="projektmunka.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <title>Riot Games rajongói oldal</title>
+  <title>Riot-Games</title>
 </head>
 
 <body>
@@ -89,11 +89,29 @@
 
 </body>
 
-<!--
 <script>
-  document.title = "kaki";
+  const title = ["R", "i", "o", "t", "-", "G", "a", "m", "e", "s", "-", "f", "a", "n", "p", "a", "g", "e"];
+  var index = 0;
+  var decreasing = false;
+  setInterval(function () {
+    document.title = "";
+    for (let i = 0; i <= index; i++) {
+      document.title += title[i];
+    }
+
+    if (decreasing == false) {
+      index++;
+    } else {
+      index--;
+    }
+
+    if (index == title.length - 1) {
+      decreasing = true;
+    } else if (index == 0) {
+      decreasing = false;
+    }
+  }, 250);
 </script>
--->
 
 <style>
   body {
