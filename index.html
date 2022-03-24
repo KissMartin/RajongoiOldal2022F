@@ -10,7 +10,8 @@
   <script src="projektmunka.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <title>Riot Games rajongói oldal</title>
+  <title>Riot-Games</title>
+
 </head>
 
 <body>
@@ -18,7 +19,9 @@
   <nav class="navbar navbarBg navbar-dark navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="/pictures/riot icon.png" alt="Riot logo" id="riotLogo"><span id="logoName">Riot Games</span></a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -42,6 +45,172 @@
       </div>
     </div>
   </nav>
+
+  <div class="main-welcome">
+    <!--
+      <img src="/pictures/riot logo.png" class="main-welcome-png" alt="Riot logo">
+    -->
+    <div class="main-welcome-png"></div>
+  </div>
+  <div class="main-text">
+    <h1 class="ms-5 mb-5 ps-5 pt-5">Rólunk</h1>
+    <div class="row text-center">
+      <div class="col-6 col-md-3 me-5 mt-5 pt-3">
+        <h1>Ez az első cím</h1>
+        <p>A riot games az egy nagyon menő cég és nagyon sok mindent tett a világért azzal hogy kiadta azt a szar league of legends nevű játékot amit nagyon sok ember utál! A riot games az egy nagyon menő cég és nagyon sok mindent tett a világért azzal hogy kiadta azt a szar league of legends nevű játékot amit nagyon sok ember utál! A riot games az egy nagyon menő cég és nagyon sok mindent tett a világért azzal hogy kiadta azt a szar league of legends nevű játékot amit nagyon sok ember utál!</p>
+      </div>
+      <div class="col-6 col-md-3 ms-5 mt-5 pt-3">
+        <h1>Ez a második cím</h1>
+      </div>
+    </div>
+  </div>
+  <div class="main-games mt-5" id="main-content">
+    <h1 class="ms-5 mb-5 ps-5 pt-5">Játékaink</h1>
+    <div class="row text-center">
+      <div class="col-10 col-md-5 me-3 main-games-card">
+        <img src="https://www.riotgames.com/darkroom/855/eea552a09c8074c6041b970449f529a6:01cd382480eb2f754ed9e93cdeb843db/lol-card-bg-1800.jpg" alt="Lol-png">
+        <img src="https://www.riotgames.com/darkroom/350/a28dfa2308a772466c7d2018a87ac000:0e9fb5e8f3944bcd4375d6960d21962e/lol-logotype.png" alt="Strategic tatcital" class="main-games-logo">
+        <p class="main-games-card-desc">A híres taktikai csapatjáték</p>
+      </div>
+      <div class="col-10 col-md-5 ms-3 main-games-card">
+        <img src="https://www.riotgames.com/darkroom/855/68fabc637b1780aa32517a812189e6bb:3498339839ce6725c201a76c86df0b37/val-card-bg-e4a2.jpg" alt="">
+        <img src="https://www.riotgames.com/darkroom/350/fc4d867e755e5215833d94e88068b0ab:ead77c56e200894c762889c3cd81a2e1/valorant-logotype.png" alt="Strategic tatcital" class="main-games-logo">
+        <p class="main-games-card-desc">Egy 5 az 5 ellen taktikai shooter játék</p>
+      </div>
+    </div>
+  </div>
+  <div class="main-series">
+    <h1 class="ms-5 mb-5 ps-5 pt-5">Sorozataink</h1>
+    <div class="row text-center">
+      <div class="col-8 col-md-4 me-3 main-series-card">
+        <img src="/pictures/arcane_final_pic.jpg" alt="Lol-png">
+        <img src="/pictures/Arcane-Emblem.png" alt="Strategic tatcital" class="main-series-logo">
+        <p class="main-series-card-desc text-black">A league of legends világába játszódó Netflixes sorozat</p>
+      </div>
+    </div>
+  </div>
+  
+<script>
+  const title = ["R", "i", "o", "t", "-", "G", "a", "m", "e", "s", "-", "f", "a", "n", "p", "a", "g", "e"];
+  var index = 0;
+  var decreasing = false;
+  setInterval(function () {
+    document.title = "";
+    for (let i = 0; i <= index; i++) {
+      document.title += title[i];
+    }
+
+    if (decreasing == false) {
+      index++;
+    } else {
+      index--;
+    }
+
+    if (index == title.length - 1) {
+      decreasing = true;
+    } else if (index == 0) {
+      decreasing = false;
+    }
+  }, 250);
+</script>
+
+<style>
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-welcome-png {
+    background-color: red;
+    height: 91vh;
+    width: 100%;
+  }
+
+  .main-text {
+    width: 100vw;
+    height: 60vh;
+  }
+
+  .main-games {
+    width: 100%;
+    height: 60vh;
+    background-color: darkmagenta;
+  }
+
+  .main-games-card {
+    position: relative;
+  }
+
+  .main-games-logo {
+    position: absolute;
+    top: 30%;
+    left: 3vw;
+    transform: translateY(-50%);
+    width: 8vw !important;
+  }
+
+  .main-games-card-desc {
+    position: absolute;
+    top: 80%;
+    left: 2vw;
+    transform: translateY(-50%);
+    width: 10vw;
+    font-size: 0.8vw !important;
+  }
+
+  .main-games img {
+    width: 100%;
+    padding-left: 0 !important;
+  }
+
+  .main-series {
+    width: 100%;
+    height: 60vh;
+    background-color: dodgerblue;
+  }
+
+  .main-series-card {
+    position: relative;
+  }
+
+  .main-series-logo {
+    position: absolute;
+    top: 30%;
+    left: 1vw;
+    transform: translateY(-50%);
+    width: 12vw !important;
+  }
+
+  .main-series-card-desc {
+    position: absolute;
+    top: 80%;
+    left: 2vw;
+    transform: translateY(-50%);
+    width: 10vw;
+    font-size: 0.8vw !important;
+  }
+
+  .main-series img {
+    width: 100%;
+    padding-left: 0 !important;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  .main-games .row>* {
+    padding: 0 !important;
+  }
+
+  .main-series .row>* {
+    padding: 0 !important;
+  }
+
+  .col-md-3 {
+    border: 1px solid white;
+  }
+</style>
+
 </body>
 
 </html>
