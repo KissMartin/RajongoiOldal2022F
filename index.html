@@ -76,8 +76,24 @@
       </div>
     </div>
   </div>
+  <div class="main-series">
+    <h1 class="ms-5 mb-5 ps-5 pt-5">Sorozataink</h1>
+    <div class="row text-center">
+      <div class="col-8 col-md-4 me-3 main-series-card">
+        <img src="/pictures/arcane_final_pic.jpg" alt="Lol-png">
+        <img src="/pictures/Arcane-Emblem.png" alt="Strategic tatcital" class="main-series-logo">
+        <p class="main-series-card-desc text-black">A league of legends világába játszódó Netflixes sorozat</p>
+      </div>
+    </div>
+  </div>
 
 </body>
+
+<!--
+<script>
+  document.title = "kaki";
+</script>
+-->
 
 <style>
   body {
@@ -122,6 +138,43 @@
     font-size: 0.8vw !important;
   }
 
+  .main-games img {
+    width: 100%;
+    padding-left: 0 !important;
+  }
+
+  .main-series {
+    width: 100%;
+    height: 60vh;
+    background-color: dodgerblue;
+  }
+
+  .main-series-card {
+    position: relative;
+  }
+
+  .main-series-logo {
+    position: absolute;
+    top: 30%;
+    left: 1vw;
+    transform: translateY(-50%);
+    width: 12vw !important;
+  }
+
+  .main-series-card-desc {
+    position: absolute;
+    top: 80%;
+    left: 2vw;
+    transform: translateY(-50%);
+    width: 10vw;
+    font-size: 0.8vw !important;
+  }
+
+  .main-series img {
+    width: 100%;
+    padding-left: 0 !important;
+  }
+
   .row {
     justify-content: center;
   }
@@ -130,13 +183,12 @@
     padding: 0 !important;
   }
 
-  .col-md-3 {
-    border: 1px solid white;
+  .main-series .row>* {
+    padding: 0 !important;
   }
 
-  .main-games img {
-    width: 100%;
-    padding-left: 0 !important;
+  .col-md-3 {
+    border: 1px solid white;
   }
 </style>
 
