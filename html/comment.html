@@ -9,9 +9,9 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="projektmunka.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <title>Kérdőív</title>
+    <title>Megjegyzés</title>
 </head>
 
 <body onload="updateComments()">
@@ -34,7 +34,7 @@
                         <a class="nav-link navButtons navbarResponziv" href="arcane.html">Arcane</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navButtons navbarResponziv" aria-current="page" href="form.html">Kérdőív</a>
+                        <a class="nav-link navButtons navbarResponziv" aria-current="page" href="form.html">Megjegyzés</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navButtons navbarResponziv" href="nevjegyek.html">Névjegyek</a>
@@ -53,7 +53,7 @@
             <a class="float-end form-counter text-white"><span id="current_count">0</span>/<span id="max_count">250</span></a><br>
             <div class="text-center">
                 <button id="send" class="btn btn-success mt-4">Küldés</button>
-                <button id="delete" class="btn btn-danger mt-4" style="margin-left: 1vw;">Törlés</button>
+                <button id="delete" class="btn btn-danger mt-4 marginLeft">Törlés</button>
             </div>
         </div>
     </div>
