@@ -54,26 +54,28 @@
     <div class="row text-center">
       <div class="col-6 col-md-3 pt-3">
         <h1>Ez az első cím</h1>
-        <p>A riot games az egy nagyon menő cég és nagyon sok mindent tett a világért azzal hogy kiadta azt a szar league of legends nevű játékot amit nagyon sok ember utál! A riot games az egy nagyon menő cég és nagyon sok mindent tett a világért azzal hogy kiadta azt a szar league of legends nevű játékot amit nagyon sok ember utál! A riot games az egy nagyon menő cég és nagyon sok mindent tett a világért azzal hogy kiadta azt a szar league of legends nevű játékot amit nagyon sok ember utál!</p>
+        <p>A Riot Games egy 2006-ban megalapított cég </p>
       </div>
       <div class="col-6 col-md-3 pt-3">
         <h1>Ez a második cím</h1>
       </div>
     </div>
   </div>
-  <div class="main-games" id="main-content">
-    <h1 class="text-center">Játékaink</h1>
-    <div class="row text-center">
-      <button onclick="window.location = 'html/lol.html' " class="col-10 col-md-5 main-games-card">
-        <img src="https://www.riotgames.com/darkroom/855/eea552a09c8074c6041b970449f529a6:01cd382480eb2f754ed9e93cdeb843db/lol-card-bg-1800.jpg" alt="Lol-png">
-        <img src="https://www.riotgames.com/darkroom/350/a28dfa2308a772466c7d2018a87ac000:0e9fb5e8f3944bcd4375d6960d21962e/lol-logotype.png" alt="Strategic tatcital" class="main-games-logo">
-        <p class="main-games-card-desc text-white">A híres taktikai csapatjáték</p>
-      </button>
-      <button onclick="window.location = 'html/valorant.html' " class="col-10 col-md-5 main-games-card">
-        <img src="https://www.riotgames.com/darkroom/855/68fabc637b1780aa32517a812189e6bb:3498339839ce6725c201a76c86df0b37/val-card-bg-e4a2.jpg" alt="">
-        <img src="https://www.riotgames.com/darkroom/350/fc4d867e755e5215833d94e88068b0ab:ead77c56e200894c762889c3cd81a2e1/valorant-logotype.png" alt="Strategic tatcital" class="main-games-logo">
-        <p class="main-games-card-desc text-white">Egy 5 az 5 ellen taktikai shooter játék</p>
-      </button>
+  <div class="main-games-background">
+    <div class="main-games" id="main-content">
+      <h1 class="text-center">Játékaink</h1>
+      <div class="row text-center">
+        <button onclick="window.location = 'html/lol.html' " class="col-10 col-md-5 main-games-card">
+          <img src="https://www.riotgames.com/darkroom/855/eea552a09c8074c6041b970449f529a6:01cd382480eb2f754ed9e93cdeb843db/lol-card-bg-1800.jpg" alt="Lol-png">
+          <img src="https://www.riotgames.com/darkroom/350/a28dfa2308a772466c7d2018a87ac000:0e9fb5e8f3944bcd4375d6960d21962e/lol-logotype.png" alt="Strategic tatcital" class="main-games-logo">
+          <p class="main-games-card-desc text-white">A híres taktikai csapatjáték</p>
+        </button>
+        <button onclick="window.location = 'html/valorant.html' " class="col-10 col-md-5 main-games-card">
+          <img src="https://www.riotgames.com/darkroom/855/68fabc637b1780aa32517a812189e6bb:3498339839ce6725c201a76c86df0b37/val-card-bg-e4a2.jpg" alt="">
+          <img src="https://www.riotgames.com/darkroom/350/fc4d867e755e5215833d94e88068b0ab:ead77c56e200894c762889c3cd81a2e1/valorant-logotype.png" alt="Strategic tatcital" class="main-games-logo">
+          <p class="main-games-card-desc text-white">Egy 5 az 5 ellen taktikai shooter játék</p>
+        </button>
+      </div>
     </div>
   </div>
   <div class="main-series">
@@ -110,6 +112,22 @@
     }
   }, 250);
 </script>
+
+<!--
+<style>
+    .main-games-background{
+      background-color: darkmagenta;
+      transform: skewY(-3deg);
+      padding-bottom: 200px;
+    }
+    .main-games{
+      background-color: unset !important;
+      width: 100%;
+      height: 30vw;
+      transform: skewY(3deg);
+    }
+  </style>
+  -->
 
 <style>
   body {
