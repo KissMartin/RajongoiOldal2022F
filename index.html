@@ -47,10 +47,7 @@
   </nav>
 
   <div class="main-welcome">
-    <!--
-      <img src="/pictures/riot logo.png" class="main-welcome-png" alt="Riot logo">
-    -->
-    <div class="main-welcome-png"></div>
+    <img src="/pictures/Riot-logo.jpg" class="main-welcome-png" alt="Riot logo">
   </div>
   <div class="main-text">
     <h1 class="mb-5 pt-5 text-center">Rólunk</h1>
@@ -119,10 +116,15 @@
     overflow-x: hidden;
   }
 
+  .main-welcome {
+    background-color: black;
+    height: 35vw;
+    width:100%;
+    text-align: center;
+  }
   .main-welcome-png {
-    background-color: red;
-    height: 91vh;
-    width: 100%;
+    height: 100%;
+    width: auto;
   }
 
   .main-text {
@@ -145,6 +147,9 @@
   }
   
   @media screen and (max-width: 991px) {
+    .main-welcome {
+      height: 50vw;
+    }
     .main-text .col-6{
       width: 90%;
       margin: 2vh 0 !important;
@@ -162,7 +167,7 @@
 
   .main-games {
     width: 100%;
-    height: 40vw;
+    height: 30vw;
     background-color: darkmagenta;
     transition: all .2s;
   }
