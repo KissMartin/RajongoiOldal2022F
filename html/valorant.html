@@ -44,29 +44,30 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <select name="dropdownMenu" id="AgentSelector" onchange="SwitchAgents()">
-            <option value="brimstone">Brimstone</option>
-            <option value="astra">Astra</option>
-            <option value="breach">Breach</option>
-            <option value="chamber">Chamber</option>
-            <option value="cypher">Cypher</option>
-            <option value="jett">Jett</option>
-            <option value="kayo">Kayo</option>
-            <option value="killjoy">Killjoy</option>
-            <option value="neon">Neon</option>
-            <option value="omen">Omen</option>
-            <option value="phoenix">Phoenix</option>
-            <option value="Raze">Raze</option>
-            <option value="reyna">Reyna</option>
-            <option value="sage">Sage</option>
-            <option value="skye">Skye</option>
-            <option value="viper">Viper</option>
-            <option value="yoru">Yoru</option>
-        </select>
         <div id="BrimDesc">
             <div class="row">
                 <div class="col-lg-5 col-8">
-                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <h4 class="mb-5 mt-4">Képességek</h4>
+                    <h6 class="ms-5">Karakterek</h6>
+                    <select name="dropdownMenu" id="AgentSelector" onchange="SwitchAgents()" class="ms-5">
+                        <option value="brimstone">Brimstone</option>
+                        <option value="astra">Astra</option>
+                        <option value="breach">Breach</option>
+                        <option value="chamber">Chamber</option>
+                        <option value="cypher">Cypher</option>
+                        <option value="jett">Jett</option>
+                        <option value="kayo">Kayo</option>
+                        <option value="killjoy">Killjoy</option>
+                        <option value="neon">Neon</option>
+                        <option value="omen">Omen</option>
+                        <option value="phoenix">Phoenix</option>
+                        <option value="Raze">Raze</option>
+                        <option value="reyna">Reyna</option>
+                        <option value="sage">Sage</option>
+                        <option value="skye">Skye</option>
+                        <option value="viper">Viper</option>
+                        <option value="yoru">Yoru</option>
+                    </select>
                     <div class="itemCentered">
                         <button class="abilityButtons" onclick="SwitchDivs(BrimC, BrimCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
                         <button class="abilityButtons" onclick="SwitchDivs(BrimE, BrimEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
