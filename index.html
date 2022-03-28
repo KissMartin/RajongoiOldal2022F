@@ -10,7 +10,8 @@
   <script src="projektmunka.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <title>Riot Games rajongói oldal</title>
+  <title>Riot-Games</title>
+
 </head>
 
 <body>
@@ -18,7 +19,9 @@
   <nav class="navbar navbarBg navbar-dark navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="/pictures/riot icon.png" alt="Riot logo" id="riotLogo"><span id="logoName">Riot Games</span></a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -34,6 +37,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link navButtons navbarResponziv" href="html/comment.html">Kérdőív</a>
+
           </li>
           <li class="nav-item">
             <a class="nav-link navButtons navbarResponziv" href="html/nevjegyek.html">Névjegyek</a>
@@ -42,6 +46,298 @@
       </div>
     </div>
   </nav>
+
+  <div class="main-welcome">
+    <img src="/pictures/Riot-logo.jpg" class="main-welcome-png" alt="Riot logo">
+  </div>
+  <div class="main-text">
+    <h1 class="mb-5 pt-5 text-center">Rólunk</h1>
+    <div class="row text-center">
+      <div class="col-6 col-md-3 pt-3">
+        <h1>Rövid történetünk</h1>
+        <p>A Riot Games 2006-ban alakult a játékosok igényeit legjobban kielégítő játékok fejlesztésére, kiadására és támogatására. 2009-ben jelent meg első játékok, a League of Legends, amely világszerte nagy sikert aratott. A LoL a legnagyobb játékosszámmal rendelkező PC-s játékká nőtte ki magát, és ezzel az e-sportok központjába helyezte magát.</p>
+      </div>
+      <div class="col-6 col-md-3 pt-3">
+        <h1>Munkahelyeink</h1>
+        <p>
+          A Nicolo Laurent vezérigazgató által vezetett Riot Games központja a kaliforniai Los Angelesben található, világszerte pedig 20-nál is több irodában több mint 3000 Riot-munkatársuk van. A vállalatunk elnyerte a Nagyszerű munkahely címet, és számos listán szerepelt már, beleértve a „25 legjobb technológiai vállalat” és az „50 legrugalmasabb vállalat” listáját.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="main-games-background">
+    <div class="main-games" id="main-content">
+      <h1 class="text-center">Játékaink</h1>
+      <div class="row text-center">
+        <button onclick="window.location = 'html/lol.html' " class="col-10 col-md-5 main-games-card">
+          <img src="https://www.riotgames.com/darkroom/855/eea552a09c8074c6041b970449f529a6:01cd382480eb2f754ed9e93cdeb843db/lol-card-bg-1800.jpg" alt="Lol-png">
+          <img src="https://www.riotgames.com/darkroom/350/a28dfa2308a772466c7d2018a87ac000:0e9fb5e8f3944bcd4375d6960d21962e/lol-logotype.png" alt="Strategic tatcital" class="main-games-logo">
+          <p class="main-games-card-desc text-white">A híres taktikai csapatjáték</p>
+        </button>
+        <button onclick="window.location = 'html/valorant.html' " class="col-10 col-md-5 main-games-card">
+          <img src="https://www.riotgames.com/darkroom/855/68fabc637b1780aa32517a812189e6bb:3498339839ce6725c201a76c86df0b37/val-card-bg-e4a2.jpg" alt="">
+          <img src="https://www.riotgames.com/darkroom/350/fc4d867e755e5215833d94e88068b0ab:ead77c56e200894c762889c3cd81a2e1/valorant-logotype.png" alt="Strategic tatcital" class="main-games-logo">
+          <p class="main-games-card-desc text-white">Egy 5 az 5 ellen taktikai shooter játék</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="main-series">
+    <h1 class="text-center">Sorozataink</h1>
+    <div class="row text-center">
+      <button onclick="window.location = 'html/arcane.html' " class="col-8 col-md-4 main-series-card">
+        <img src="/pictures/arcane_final_pic.jpg" alt="Lol-png">
+        <img src="/pictures/Arcane-Emblem.png" alt="Strategic tatcital" class="main-series-logo">
+        <p class="main-series-card-desc text-black">A league of legends világába játszódó Netflixes sorozat</p>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const title = ["R", "i", "o", "t", "-", "G", "a", "m", "e", "s", "-", "f", "a", "n", "p", "a", "g", "e"];
+    var index = 0;
+    var decreasing = false;
+    setInterval(function () {
+      document.title = "";
+      for (let i = 0; i <= index; i++) {
+        document.title += title[i];
+      }
+
+      if (decreasing == false) {
+        index++;
+      } else {
+        index--;
+      }
+
+      if (index == title.length - 1) {
+        decreasing = true;
+      } else if (index == 0) {
+        decreasing = false;
+      }
+    }, 250);
+  </script>
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    .main-welcome {
+      background-color: black;
+      height: 40vw;
+      width: 100%;
+      text-align: center;
+    }
+
+    .main-welcome-png {
+      height: 100%;
+      width: auto;
+    }
+
+    .main-text {
+      width: 100%;
+      height: 50vh;
+    }
+
+    .main-text h1 {
+      font-size: 2vw;
+      transition: all .4s;
+    }
+
+    .main-text p {
+      font-size: 1vw;
+      transition: all .4s;
+    }
+
+    .main-text .col-6 {
+      width: 40vw;
+      margin: 10px 20px;
+      transition: all .2s;
+    }
+
+    @media screen and (max-width: 991px) {
+      .main-welcome {
+        height: 50vw;
+      }
+
+      .main-text .col-6 {
+        width: 90%;
+        margin: 2vh 0 !important;
+      }
+
+      .main-text h1 {
+        font-size: 4vw;
+      }
+
+      .main-text p {
+        font-size: 3vw;
+      }
+
+      .main-text {
+        height: 120vw;
+      }
+    }
+
+    .main-games {
+      width: 100%;
+      height: 30vw;
+      background-color: rgb(0, 0, 49);
+      transition: all .2s;
+    }
+
+    .main-games-card {
+      position: relative;
+      outline: none;
+      border: none;
+      margin: 0 20px;
+      transition: all .2s ease-in-out;
+    }
+
+    .main-games-card:hover {
+      transform: scale(1.05);
+    }
+
+    .main-games-logo {
+      position: absolute;
+      top: 30%;
+      left: 3vw;
+      transform: translateY(-50%);
+      width: 8vw !important;
+      transition: all .2s;
+    }
+
+    .main-games-card-desc {
+      position: absolute;
+      top: 80%;
+      left: 2vw;
+      transform: translateY(-50%);
+      width: 10vw;
+      font-size: 0.8vw !important;
+      transition: all .2s;
+    }
+
+    .main-games img {
+      width: 100%;
+      padding-left: 0 !important;
+      transition: all .2s;
+    }
+
+    .main-games h1 {
+      padding: 2vw 0;
+      font-size: 2vw;
+      transition: all .2s;
+    }
+
+    @media screen and (max-width: 991px) {
+      .main-games {
+        height: 120vw;
+      }
+
+      .main-games-card {
+        width: 80%;
+        margin-top: 5vh;
+      }
+
+      .main-games-logo {
+        width: 20vw !important;
+      }
+
+      .main-games h1 {
+        padding-top: 4vw;
+        font-size: 4vw;
+      }
+
+      .main-games-card-desc {
+        font-size: 2vw !important;
+        width: 20vw;
+      }
+    }
+
+    .main-series {
+      width: 100%;
+      height: 30vw;
+      background-color: rgb(53, 0, 0);
+    }
+
+    .main-series-card {
+      position: relative;
+      outline: none;
+      border: none;
+      transition: all .2s ease-in-out;
+    }
+
+    .main-series-card:hover {
+      transform: scale(1.05);
+    }
+
+    .main-series-logo {
+      position: absolute;
+      top: 30%;
+      left: 1vw;
+      transform: translateY(-50%);
+      width: 12vw !important;
+    }
+
+    .main-series-card-desc {
+      position: absolute;
+      top: 80%;
+      left: 2vw;
+      transform: translateY(-50%);
+      width: 10vw;
+      font-size: 1vw !important;
+    }
+
+    .main-series img {
+      width: 100%;
+      padding-left: 0 !important;
+    }
+
+    .main-series h1 {
+      padding: 2vw 0;
+      font-size: 2vw;
+    }
+
+    @media screen and (max-width: 991px) {
+      .main-series {
+        height: 90vw;
+      }
+
+      .main-series-card {
+        width: 80%;
+        margin-top: 5vh;
+      }
+
+      .main-series-logo {
+        width: 30vw !important;
+      }
+
+      .main-series h1 {
+        font-size: 4vw;
+      }
+
+      .main-series-card-desc {
+        font-size: 2vw !important;
+        width: 20vw;
+      }
+    }
+
+    .row {
+      justify-content: center;
+    }
+
+    .main-games .row>* {
+      padding: 0 !important;
+    }
+
+    .main-series .row>* {
+      padding: 0 !important;
+    }
+
+    .col-md-3 {
+      border: 1px solid white;
+    }
+  </style>
+
 </body>
 
 </html>
