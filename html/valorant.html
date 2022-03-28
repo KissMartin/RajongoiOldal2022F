@@ -12,6 +12,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>Valorant</title>
+    <style>
+        body{
+            background-color: #bdbcb7 !important;
+            background: url("/pictures/valorant_charatcers/letöltés.png");
+        }
+    </style>
 </head>
 
 <body>
@@ -45,24 +51,23 @@
     </nav>
     <div class="veryTeszt container-fluid" style="height: 500px;">
         <div class="row">
-            <div class="col-6">
-                <h6>Képességek</h6>
-                <ul>
-                    <li class="verytest2"><img src="/pictures/valorant_charatcers/TX_Brimstone_C.png" alt="" class="verytest3" usemap="#asd3"></li>
-                    <li class="verytest2"><img src="/pictures/valorant_charatcers/TX_Brimstone_E.png" alt="" class="verytest3" usemap="#asd3"></li>
-                    <li class="verytest2"><img src="/pictures/valorant_charatcers/TX_Brimstone_Q.png" alt="" class="verytest3" usemap="#asd3"></li>
-                    <li class="verytest2"><img src="/pictures/valorant_charatcers/TX_Brimstone_X.png" alt="" class="verytest3" usemap="#asd3"></li>
-                </ul>
+            <div class="col-5">
+                <h6 class="mb-5 mt-4">Képességek</h6>
+                <div>
+                    <button class="asd5" type="button" title="ability"><img src="/pictures/valorant_charatcers/TX_Brimstone_C.png" alt="" class="verytest3 asd4"></button>
+                    <button class="asd5" type="button" title="ability"><img src="/pictures/valorant_charatcers/TX_Brimstone_E.png" alt="" class="verytest3 asd4"></button>
+                    <button class="asd5" type="button" title="ability"><img src="/pictures/valorant_charatcers/TX_Brimstone_Q.png" alt="" class="verytest3 asd4"></button>
+                    <button class="asd5" type="button" title="ability"><img src="/pictures/valorant_charatcers/TX_Brimstone_X.png" alt="" class="verytest3 asd4"></button>
+                </div>
             </div>
-            <div class="col-6">
+            <div class="col-7 m">
+                <video src="/pictures/valorant_charatcers/Brimstone_C_v001_web.mp4" loop autoplay class="videoprev"></video>
 
             </div>
 
         </div>
     </div>
-<map name="asd3">
-    <area shape="default" coords="" href="" alt="ablity">
-</map>
+    <hr>
     <div class="slideShowBgColor">
         <h1 class="slideShowText">Mapok</h1>
         <div class="col-8 mx-auto py-3 slideShowResize">
@@ -111,10 +116,26 @@
         </div>
     </div>
     <style>
-        .slideShowBgColor {
-            background-color: #dbd8d2 !important;
+        
+        .videoprev{
+            max-width: 80%;
+            height: auto;
         }
+        .verytest3 {
+            width: 5vw;
+            border: 1px solid #bdbcb7;
+            /* color: #0f1923; */
+            filter: brightness(0);
+            margin-right: 0px;
+            padding: 8px;
 
+        }
+        .asd5{
+            padding-top: 15px;
+            all: unset;
+            width: 5vw;
+            margin-right: 20px;
+        }
         .slideShowText {
             color: #0f1923;
             margin: 0 0 0 10vw;
@@ -122,24 +143,19 @@
         }
 
         .veryTeszt {
-            background: url("/pictures/valorant_charatcers/letöltés.png");
+            margin-left: 50px;
+            box-sizing: border-box;
         }
 
         .verytest2 {
             display: inline;
         }
 
-        .verytest3 {
-            width: 3.5vw;
-            border: 1px solid #bdbcb7;
-            /* color: #0f1923; */
+        .asd4:hover{
+            background-color: #ff4655;
             filter: brightness(1);
-            margin-right: 20px;
-            padding: 8px;
-
-        }
-        img:hover{
-            background-color: aqua;
+            border: 1px solid white;
+            
         }
     </style>
 </body>
