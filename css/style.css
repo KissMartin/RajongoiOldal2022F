@@ -231,10 +231,12 @@ a[target="_blank"] {
 }
 a[target="_blank"]:hover {
   background: linear-gradient(315deg, #6757d3 0%, #f53844 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   background-clip: unset;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
-.marginLeft{
+.marginLeft {
   margin-left: 1vw;
 }
