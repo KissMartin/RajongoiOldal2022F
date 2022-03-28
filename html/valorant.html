@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="hu">
+<html lang="us">
 
 <head>
     <meta charset="UTF-8">
@@ -43,31 +43,32 @@
             </div>
         </div>
     </nav>
+    
     <div class="container-fluid">
+        <h1>Characters</h1>
+        <select name="dropdownMenu" id="AgentSelector" onchange="SwitchAgents()">
+            <option value="brimstone">Brimstone</option>
+            <option value="astra">Astra</option>
+            <option value="breach">Breach</option>
+            <option value="chamber">Chamber</option>
+            <option value="cypher">Cypher</option>
+            <option value="jett">Jett</option>
+            <option value="kayo">Kayo</option>
+            <option value="killjoy">Killjoy</option>
+            <option value="neon">Neon</option>
+            <option value="omen">Omen</option>
+            <option value="phoenix">Phoenix</option>
+            <option value="Raze">Raze</option>
+            <option value="reyna">Reyna</option>
+            <option value="sage">Sage</option>
+            <option value="skye">Skye</option>
+            <option value="viper">Viper</option>
+            <option value="yoru">Yoru</option>
+        </select>
         <div id="BrimDesc">
             <div class="row">
                 <div class="col-lg-5 col-8">
-                    <h4 class="mb-5 mt-4">Képességek</h4>
-                    <h6 class="ms-5">Karakterek</h6>
-                    <select name="dropdownMenu" id="AgentSelector" onchange="SwitchAgents()" class="ms-5">
-                        <option value="brimstone">Brimstone</option>
-                        <option value="astra">Astra</option>
-                        <option value="breach">Breach</option>
-                        <option value="chamber">Chamber</option>
-                        <option value="cypher">Cypher</option>
-                        <option value="jett">Jett</option>
-                        <option value="kayo">Kayo</option>
-                        <option value="killjoy">Killjoy</option>
-                        <option value="neon">Neon</option>
-                        <option value="omen">Omen</option>
-                        <option value="phoenix">Phoenix</option>
-                        <option value="Raze">Raze</option>
-                        <option value="reyna">Reyna</option>
-                        <option value="sage">Sage</option>
-                        <option value="skye">Skye</option>
-                        <option value="viper">Viper</option>
-                        <option value="yoru">Yoru</option>
-                    </select>
+                    <h2 class="mb-5 mt-4">Abilities</h2>
                     <div class="itemCentered">
                         <button class="abilityButtons" onclick="SwitchDivs(BrimC, BrimCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
                         <button class="abilityButtons" onclick="SwitchDivs(BrimE, BrimEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
@@ -914,7 +915,7 @@
     <!--SlideShow-->
     <div class="slideShowBgColor backgroundImage mt-5" >
         <hr style="background-color:#bdbcb7;">
-        <h1 class="slideShowText">Mapok</h1>
+        <h1 class="slideShowText">Maps</h1>
         <div class="col-8 mx-auto py-3 slideShowResize">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
