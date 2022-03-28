@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="hu">
+
+<html lang="us">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +14,7 @@
     <title>Valorant</title>
 </head>
 
-<body>
+<body onload="setDef()">
     <!--Navbar-->
     <nav class="navbar navbarBg navbar-dark navbar-expand-lg">
         <div class="container-fluid">
@@ -42,6 +43,1061 @@
             </div>
         </div>
     </nav>
+    <div class="arcaneBg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="arcaneBgShadow col-12 col-xl-6">
+                    <img src="/pictures/valorant-log.png" class="pictureResize" alt="">
+                </div>
+                <div class="col-12 col-xl-6">
+                </div>
+            </div>
+        </div>
+        <img src="/pictures/valorant_header.png" alt="Lol-logo" class="Arcane_img">
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-12">
+                <h1 class="pt-4">Characters</h1>
+                <select name="dropdownMenu" id="AgentSelector" onchange="SwitchAgents()">
+                    <option value="brimstone">Brimstone</option>
+                    <option value="astra">Astra</option>
+                    <option value="breach">Breach</option>
+                    <option value="chamber">Chamber</option>
+                    <option value="cypher">Cypher</option>
+                    <option value="jett">Jett</option>
+                    <option value="kayo">Kayo</option>
+                    <option value="killjoy">Killjoy</option>
+                    <option value="neon">Neon</option>
+                    <option value="omen">Omen</option>
+                    <option value="phoenix">Phoenix</option>
+                    <option value="raze">Raze</option>
+                    <option value="reyna">Reyna</option>
+                    <option value="sage">Sage</option>
+                    <option value="skye">Skye</option>
+                    <option value="viper">Viper</option>
+                    <option value="yoru">Yoru</option>
+                </select>
+                <h3 class="pt-5">Introduction</h3>
+                <p class="contentResize contentJustify">Valorant is a free-to-play first-person hero shooter developed and published by Riot Games, for Microsoft Windows. First teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by an official release on June 2, 2020. The development of the game started in 2014. Valorant takes inspiration from the Counter-Strike series of tactical shooters, borrowing several mechanics such as the buy menu, spray patterns, and inaccuracy while moving.</p>
+            </div>
+            <div class="col-xl-6 col-12 pt-5">
+                <p>For more additional information please visit the Official Riot Games valorant page</p>
+                <a href="https://playvalorant.com/en-us/">Official Riot Games website</a>
+            </div>
+        </div>
+        <div id="BrimDesc">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h2 class="mb-5 mt-4">Abilities</h2>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(BrimC, BrimCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BrimE, BrimEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BrimQ, BrimQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BrimX, BrimXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="BrimCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p class="contentJustify">EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="BrimEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p class="contentJustify">EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="BrimQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p class="contentJustify">EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="BrimXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p class="contentJustify">EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BrimC">
+                        <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BrimE">
+                        <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BrimQ">
+                        <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BrimX">
+                        <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="AstraDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(AstraC, AstraCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Astra/Astra_Ability_Icons_C_GravityWellv2.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(AstraE, AstraEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Astra/Astra_Ability_Icons_E_Nebulav2.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(AstraQ, AstraQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Astra/Astra_Ability_Icons_Q_NovaPulsev2.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(AstraX, AstraXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Astra/Astra_Ability_Icons_X_CosmicDividev2.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="AstraCDesc" class="Description">
+                            <h4 class="mt-3">C - GRAVITY WELL</h4>
+                            <p class="contentJustify">Place Stars in Astral Form (X) ACTIVATE a Star to form a Gravity Well. Players in the area are pulled toward the center before it explodes, making all players still trapped inside fragile.</p>
+                        </div>
+                        <div id="AstraEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - NEBULA</h4>
+                            <p class="contentJustify">Place Stars in Astral Form (X) ACTIVATE a Star to transform it into a Nebula (smoke). Use (F) on a Star to Dissipate it, returning the star to be placed in a new location after a delay. Dissipate briefly forms a fake Nebula at the Star’s location before returning.</p>
+                        </div>
+                        <div id="AstraQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - NOVA PULSE</h4>
+                            <p class="contentJustify">Place Stars in Astral Form (X) ACTIVATE a Star to detonate a Nova Pulse. The Nova Pulse charges briefly then strikes, concussing all players in its area.</p>
+                        </div>
+                        <div id="AstraXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ASTRAL FORM / COSMIC DIVIDE</h4>
+                            <p class="contentJustify">ACTIVATE (X) to enter Astral Form where you can place Stars with PRIMARY FIRE. Stars can be reactivated later, transforming them into a Nova Pulse, Nebula, or Gravity Well. When Cosmic Divide is charged, use SECONDARY FIRE in Astral Form to begin aiming it, then PRIMARY FIRE to select two locations. An infinite Cosmic Divide connects the two points you select. Cosmic Divide blocks bullets and heavily dampens audio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_C.mp4" class="Video videoprev" muted loop autoplay id="AstraC">
+                        <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_C.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" class="Video videoprev" muted loop autoplay id="AstraE">
+                        <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_Q.mp4" class="Video videoprev" muted loop autoplay id="AstraQ">
+                        <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_Q.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_ULT.mp4" class="Video videoprev" muted loop autoplay id="AstraX">
+                        <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_ULT.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="BreachDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(BreachC, BreachCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Breach/TX_Breach_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BreachE, BreachEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Breach/TX_Breach_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BreachQ, BreachQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Breach/TX_Breach_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BreachX, BreachXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Breach/TX_Breach_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="BreachCDesc" class="Description">
+                            <h4 class="mt-3">C - AFTERSHOCK</h4>
+                            <p class="contentJustify">EQUIP a fusion charge. FIRE the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area.</p>
+                        </div>
+                        <div id="BreachEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - FAULT LINE</h4>
+                            <p class="contentJustify">EQUIP a seismic blast. HOLD FIRE to increase the distance. RELEASE to set off the quake, dazing all players in its zone and in a line up to the zone.</p>
+                        </div>
+                        <div id="BreachQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - FLASHPOINT</h4>
+                            <p class="contentJustify">EQUIP a blinding charge. FIRE the charge to set fast-acting burst through the wall. The charge detonates to blind all players looking at it.</p>
+                        </div>
+                        <div id="BreachXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ROLLING THUNDER</h4>
+                            <p class="contentJustify">EQUIP a seismic charge. FIRE to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Breach/Breach_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BreachC">
+                        <source src="/pictures/valorant_charatcers/Breach/Breach_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BreachE">
+                        <source src="/pictures/valorant_charatcers/Breach/Breach_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BreachQ">
+                        <source src="/pictures/valorant_charatcers/Breach/Breach_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BreachX">
+                        <source src="/pictures/valorant_charatcers/Breach/Breach_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="ChamberDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(ChamberC, ChamberCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Chamber/Chamber_ability_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ChamberE, ChamberEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Chamber/Chamber_ability_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ChamberQ, ChamberQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Chamber/Chamber_ability_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ChamberX,ChamberXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Chamber/Chamber_ability_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="ChamberCDesc" class="Description">
+                            <h4 class="mt-3">C - TRADEMARK</h4>
+                            <p class="contentJustify">PLACE a trap that scans for enemies. When a visible enemy comes in range, the trap counts down and then destabilizes the terrain around them, creating a lingering field that slows players caught inside of it.</p>
+                        </div>
+                        <div id="ChamberEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - RENDEZVOUS</h4>
+                            <p class="contentJustify">PLACE two teleport anchors. While on the ground and in range of an anchor, REACTIVATE to quickly teleport to the other anchor. Anchors can be picked up to be REDEPLOYED.</p>
+                        </div>
+                        <div id="ChamberQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - HEADHUNTER</h4>
+                            <p class="contentJustify">ACTIVATE to equip a heavy pistol. ALT FIRE with the pistol equipped to aim down sights.</p>
+                        </div>
+                        <div id="ChamberXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - TOUR DE FORCE</h4>
+                            <p class="contentJustify">ACTIVATE to summon a powerful, custom sniper rifle that will kill an enemy with any direct hit. Killing an enemy creates a lingering field that slows players caught inside of it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_C.mp4" class="Video videoprev" muted loop autoplay id="ChamberC">
+                        <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_C.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_E.mp4" class="Video videoprev" muted loop autoplay id="ChamberE">
+                        <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_E.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_Q.mp4" class="Video videoprev" muted loop autoplay id="ChamberQ">
+                        <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_Q.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_X.mp4" class="Video videoprev" muted loop autoplay id="ChamberX">
+                        <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_X.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="CypherDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(CypherC, CypherCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Cypher/TX_Cypher_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(CypherE, CypherEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Cypher/TX_Cypher_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(CypherQ, CypherQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Cypher/TX_Cypher_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(CypherX, CypherXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Cypher/TX_Cypher_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="CypherCDesc" class="Description">
+                            <h4 class="mt-3">C - TRAPWIRE</h4>
+                            <p class="contentJustify">EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED.</p>
+                        </div>
+                        <div id="CypherEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SPYCAM</h4>
+                            <p class="contentJustify">EQUIP a spycam. FIRE to place the spycam at the targeted location. RE-USE this ability to take control of the camera’s view. While in control of the camera, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.</p>
+                        </div>
+                        <div id="CypherQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - CYBER CAGE</h4>
+                            <p class="contentJustify">INSTANTLY toss the cyber cage in front of Cypher. Activate to create a zone that blocks vision and slows enemies who pass through it.</p>
+                        </div>
+                        <div id="CypherXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - NEURAL THEFT</h4>
+                            <p class="contentJustify">INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Cypher/Cypher_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="CypherC">
+                        <source src="/pictures/valorant_charatcers/Cypher/Cypher_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="CypherE">
+                        <source src="/pictures/valorant_charatcers/Cypher/Cypher_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="CypherQ">
+                        <source src="/pictures/valorant_charatcers/Cypher/Cypher_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="CypherX">
+                        <source src="/pictures/valorant_charatcers/Cypher/Cypher_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="JettDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(JettC, JettCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Jett/TX_Jett_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(JettE, JettEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Jett/TX_Jett_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(JettQ, JettQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Jett/TX_Jett_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(JettX, JettXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Jett/TX_Jett_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="JettCDesc" class="Description">
+                            <h4 class="mt-3">C - CLOUDBURST</h4>
+                            <p class="contentJustify">INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair.</p>
+                        </div>
+                        <div id="JettEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - TAILWIND</h4>
+                            <p class="contentJustify">INSTANTLY propel Jett in the direction she is moving. If Jett is standing still, she will propel forward.</p>
+                        </div>
+                        <div id="JettQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - UPDRAFT</h4>
+                            <p class="contentJustify">INSTANTLY propel Jett high into the air.</p>
+                        </div>
+                        <div id="JettXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - BLADE STORM</h4>
+                            <p class="contentJustify">EQUIP a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target. ALTERNATE FIRE to throw all remaining daggers at your target.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Jett/Jett_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="JettC">
+                        <source src="/pictures/valorant_charatcers/Jett/Jett_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="JettE">
+                        <source src="/pictures/valorant_charatcers/Jett/Jett_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="JettQ">
+                        <source src="/pictures/valorant_charatcers/Jett/Jett_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="JettX">
+                        <source src="/pictures/valorant_charatcers/Jett/Jett_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="KayoDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(KayoC, KayoCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Kayo/C_FragMent.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KayoE, KayoEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Kayo/E_ZeroPoint.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KayoQ, KayoQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Kayo/Q_FlashDrive.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KayoX, KayoXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Kayo/X_NullCmd.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="KayoCDesc" class="Description">
+                            <h4 class="mt-3">C - FRAG/MENT</h4>
+                            <p class="contentJustify">EQUIP an explosive fragment. FIRE to throw. The fragment sticks to the floor and explodes multiple times, dealing near lethal damage at the center with each explosion.</p>
+                        </div>
+                        <div id="KayoEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - ZERO/POINT</h4>
+                            <p class="contentJustify">EQUIP a suppression blade. FIRE to throw. The blade sticks to the first surface it hits, winds up, and suppresses anyone in the radius of the explosion.</p>
+                        </div>
+                        <div id="KayoQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - FLASH/DRIVE</h4>
+                            <p class="contentJustify">EQUIP a flash grenade. FIRE to throw. The flash grenade explodes after a short fuse, blinding anyone in line of sight.</p>
+                        </div>
+                        <div id="KayoXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - NULL/CMD</h4>
+                            <p class="contentJustify">INSTANTLY overload with polarized radianite energy that empowers KAY/O and causes large energy pulses to emit from his location. Enemies hit with these pulses are suppressed for a short duration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Kayo/KAYO_C_v002_web.mp4" class="Video videoprev" muted loop autoplay id="KayoC">
+                        <source src="/pictures/valorant_charatcers/Kayo/KAYO_C_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_E_v002_web.mp4" class="Video videoprev" muted loop autoplay id="KayoE">
+                        <source src="/pictures/valorant_charatcers/Kayo/KAYO_E_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="KayoQ">
+                        <source src="/pictures/valorant_charatcers/Kayo/KAYO_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_X_v003_web.mp4" class="Video videoprev" muted loop autoplay id="KayoX">
+                        <source src="/pictures/valorant_charatcers/Kayo/KAYO_X_v003_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="KilljoyDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(KilljoyC, KilljoyCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Killjoy/Copy_of_TX_KJ_Bees.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KilljoyE, KilljoyEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Killjoy/Copy_of_tx_kj_turret.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KilljoyQ, KilljoyQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Killjoy/Copy_of_TX_KJ_Alarm.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KilljoyX, KilljoyXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Killjoy/Copy_of_TX_KJ_Lockdown.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="KilljoyCDesc" class="Description">
+                            <h4 class="mt-3">C - NANOSWARM</h4>
+                            <p class="contentJustify">EQUIP a Nanoswarm grenade. FIRE to throw the grenade. Upon landing, the Nanoswarm goes covert. ACTIVATE the Nanoswarm to deploy a damaging swarm of nanobots.</p>
+                        </div>
+                        <div id="KilljoyEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - TURRET</h4>
+                            <p class="contentJustify">EQUIP a Turret. FIRE to deploy a turret that fires at enemies in a 180 degree cone. HOLD EQUIP to recall the deployed turret.</p>
+                        </div>
+                        <div id="KilljoyQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - ALARMBOT</h4>
+                            <p class="contentJustify">EQUIP a covert Alarmbot. FIRE to deploy a bot that hunts down enemies that get in range. After reaching its target, the bot explodes, applying Vulernable. HOLD EQUIP to recall a deployed bot.</p>
+                        </div>
+                        <div id="KilljoyXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - LOCKDOWN</h4>
+                            <p class="contentJustify">EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Killjoy/Grenade_LowQuality.mp4" class="Video videoprev" muted loop autoplay id="KilljoyC">
+                        <source src="/pictures/valorant_charatcers/Killjoy/Grenade_LowQuality.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/Turret_LowQuality.mp4" class="Video videoprev" muted loop autoplay id="KilljoyE">
+                        <source src="/pictures/valorant_charatcers/Killjoy/Turret_LowQuality.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/AlarmBot_LowQuality.mp4" class="Video videoprev" muted loop autoplay id="KilljoyQ">
+                        <source src="/pictures/valorant_charatcers/Killjoy/AlarmBot_LowQuality.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/Ultimate_LowQualityV02.mp4" class="Video videoprev" muted loop autoplay id="KilljoyX">
+                        <source src="/pictures/valorant_charatcers/Killjoy/Ultimate_LowQuality.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="NeonDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="col-xl-6 col-12">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(NeonC, NeonCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Neon/Neon_C-Fast_Lane.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(NeonE, NeonEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Neon/Neon_E-High_Gear.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(NeonQ, NeonQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Neon/Neon_Q-Relay_Bolt.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(NeonX, NeonXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Neon/Neon_X-Overdrive.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="NeonCDesc" class="Description">
+                            <h4 class="mt-3">C - FAST LANE</h4>
+                            <p class="contentJustify">FIRE two energy lines forward on the ground that extend a short distance or until they hit a surface. The lines rise into walls of static electricity that block vision and damage enemies passing through them.</p>
+                        </div>
+                        <div id="NeonEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - HIGH GEAR</h4>
+                            <p class="contentJustify">INSTANTLY channel Neon’s power for increased speed. When charged, ALT FIRE to trigger an electric slide. Slide charge resets every two kills.</p>
+                        </div>
+                        <div id="NeonQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - RELAY BOLT</h4>
+                            <p class="contentJustify">INSTANTLY throw an energy bolt that bounces once. Upon hitting each surface, the bolt electrifies the ground below with a concussive blast.</p>
+                        </div>
+                        <div id="NeonXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - OVERDRIVE</h4>
+                            <p class="contentJustify">Unleash Neon’s full power and speed for a short duration. FIRE to channel the power into a deadly lightning beam with high movement accuracy. The duration resets on each kill.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-C_Preview_Walls_noHUD_Web_h264.mp4" class="Video videoprev" muted loop autoplay id="NeonC">
+                        <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-C_Preview_Walls_noHUD_Web_h264.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-E_Preview_Sprint_noHUD_Web_h264.mp4" class="Video videoprev" muted loop autoplay id="NeonE">
+                        <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-E_Preview_Sprint_noHUD_Web_h264.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-Q_Preview_Stun_noHUD_Web_h264.mp4" class="Video videoprev" muted loop autoplay id="NeonQ">
+                        <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-Q_Preview_Stun_noHUD_Web_h264.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-X_Preview_Ult_noHUD_Web_h264.mp4" class="Video videoprev" muted loop autoplay id="NeonX">
+                        <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-X_Preview_Ult_noHUD_Web_h264.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="OmenDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(OmenC, OmenCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Omen/TX_Omen_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(OmenE, OmenEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Omen/TX_Omen_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(OmenQ, OmenQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Omen/TX_Omen_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(OmenX, OmenXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Omen/TX_Omen_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="OmenCDesc" class="Description">
+                            <h4 class="mt-3">C - SHROUDED STEP</h4>
+                            <p class="contentJustify">EQUIP a shadow walk ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location.</p>
+                        </div>
+                        <div id="OmenEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - DARK COVER</h4>
+                            <p class="contentJustify">EQUIP a shadow orb and see its range indicator. FIRE to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. HOLD ALTERNATE FIRE while targeting to move the marker further away. HOLD the ability key with targeting to move the marker closer.</p>
+                        </div>
+                        <div id="OmenQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - PARANOIA</h4>
+                            <p class="contentJustify">INSTANTLY fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls.</p>
+                        </div>
+                        <div id="OmenXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - FROM THE SHADOWS</h4>
+                            <p class="contentJustify">EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Omen/Omen_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="OmenC">
+                        <source src="/pictures/valorant_charatcers/Omen/Omen_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="OmenE">
+                        <source src="/pictures/valorant_charatcers/Omen/Omen_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="OmenQ">
+                        <source src="/pictures/valorant_charatcers/Omen/Omen_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="OmenX">
+                        <source src="/pictures/valorant_charatcers/Omen/Omen_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="PhoenixDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(PhoenixC, PhoenixCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Phoenix/TX_Pheonix_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(PhoenixE, PhoenixEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Phoenix/TX_Pheonix_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(PhoenixQ, PhoenixQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Phoenix/TX_Pheonix_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(PhoenixX, PhoenixXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Phoenix/TX_Pheonix_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="PhoenixCDesc" class="Description">
+                            <h4 class="mt-3">C - BLAZE</h4>
+                            <p class="contentJustify">EQUIP a flame wall. FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair.</p>
+                        </div>
+                        <div id="PhoenixEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - HOT HANDS</h4>
+                            <p class="contentJustify">EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies.</p>
+                        </div>
+                        <div id="PhoenixQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - CURVEBALL</h4>
+                            <p class="contentJustify">EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right.</p>
+                        </div>
+                        <div id="PhoenixXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - RUN IT BACK</h4>
+                            <p class="contentJustify">INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Phoenix/Phoenix_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="PhoenixC">
+                        <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="PhoenixE">
+                        <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="PhoenixQ">
+                        <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="PhoenixX">
+                        <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="RazeDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(RazeC, RazeCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Raze/TX_Raze_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(RazeE, RazeEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Raze/TX_Raze_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(RazeQ, RazeQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Raze/TX_Raze_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(RazeX, RazeXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Raze/TX_Raze_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="RazeCDesc" class="Description">
+                            <h4 class="mt-3">C - BOOM BOT</h4>
+                            <p class="contentJustify">EQUIP a Boom Bot. FIRE will deploy the bot, causing it to travel in a straight line on the ground, bouncing off walls. The Boom Bot will lock on to any enemies in its frontal cone and chase them, exploding for heavy damage if it reaches them.</p>
+                        </div>
+                        <div id="RazeEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - PAINT SHELLS</h4>
+                            <p class="contentJustify">EQUIP a cluster grenade. FIRE to throw the grenade, which does damage and creates sub-munitions, each doing damage to anyone in their range.</p>
+                        </div>
+                        <div id="RazeQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - BLAST PACK</h4>
+                            <p class="contentJustify">INSTANTLY throw a Blast Pack that will stick to surfaces. RE-USE the ability after deployment to detonate, damaging and moving anything hit. Raze isn't damaged by this ability, but will still take fall damage if launched up far enough.</p>
+                        </div>
+                        <div id="RazeXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - SHOWSTOPPER</h4>
+                            <p class="contentJustify">EQUIP a rocket launcher. FIRE shoots a rocket that does massive area damage on contact with anything.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Raze/Raze_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="RazeC">
+                        <source src="/pictures/valorant_charatcers/Raze/Raze_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="RazeE">
+                        <source src="/pictures/valorant_charatcers/Raze/Raze_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="RazeQ">
+                        <source src="/pictures/valorant_charatcers/Raze/Raze_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="RazeX">
+                        <source src="/pictures/valorant_charatcers/Raze/Raze_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="ReynaDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(ReynaC, ReynaCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Reyna/TX_Reyna_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ReynaE, ReynaEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Reyna/TX_Reyna_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ReynaQ, ReynaQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Reyna/TX_Reyna_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ReynaX, ReynaXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Reyna/TX_Reyna_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="ReynaCDesc" class="Description">
+                            <h4 class="mt-3">C - LEER</h4>
+                            <p class="contentJustify">EQUIP an ethereal destructible eye. ACTIVATE to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it.</p>
+                        </div>
+                        <div id="ReynaEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - DISMISS</h4>
+                            <p class="contentJustify">INSTANTLY consume a nearby soul orb, becoming intangible for a short duration. If EMPRESS is active, also become invisible.</p>
+                        </div>
+                        <div id="ReynaQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - DEVOUR</h4>
+                            <p class="contentJustify">Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. INSTANTLY consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If EMPRESS is active, this skill will automatically cast and not consume the orb.</p>
+                        </div>
+                        <div id="ReynaXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - EMPRESS</h4>
+                            <p class="contentJustify">INSTANTLY enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Reyna/Reyna_C_v002_web.mp4" class="Video videoprev" muted loop autoplay id="ReynaC">
+                        <source src="/pictures/valorant_charatcers/Reyna/Reyna_C_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_E_v002_web.mp4" class="Video videoprev" muted loop autoplay id="ReynaE">
+                        <source src="/pictures/valorant_charatcers/Reyna/Reyna_E_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="ReynaQ">
+                        <source src="/pictures/valorant_charatcers/Reyna/Reyna_Q_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="ReynaX">
+                        <source src="/pictures/valorant_charatcers/Reyna/Reyna_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="SageDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(SageC, SageCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Sage/TX_Sage_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SageE, SageEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Sage/TX_Sage_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SageQ, SageQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Sage/TX_Sage_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SageX, SageXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Sage/TX_Sage_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="SageCDesc" class="Description">
+                            <h4 class="mt-3">C - BARRIER ORB</h4>
+                            <p class="contentJustify">EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="SageEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - HEALING ORB</h4>
+                            <p class="contentJustify">EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.</p>
+                        </div>
+                        <div id="SageQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - SLOW ORB</h4>
+                            <p class="contentJustify">EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.</p>
+                        </div>
+                        <div id="SageXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - RESURRECTION</h4>
+                            <p class="contentJustify">EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Sage/Sage_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="SageC">
+                        <source src="/pictures/valorant_charatcers/Sage/Sage_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="SageE">
+                        <source src="/pictures/valorant_charatcers/Sage/Sage_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="SageQ">
+                        <source src="/pictures/valorant_charatcers/Sage/Sage_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="SageX">
+                        <source src="/pictures/valorant_charatcers/Sage/Sage_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="SkyeDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(SkyeC, SkyeCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Skye/SKye-abilities-_0000s_0000_ICONS_0003_Layer-4.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SkyeE, SkyeEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Skye/SKye-abilities-_0000s_0001_ICONS_0002_Layer-3.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SkyeQ, SkyeQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Skye/SKye-abilities-_0000s_0002_ICONS_0001_Layer-2.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SkyeX, SkyeXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Skye/SKye-abilities-_0000s_0003_ICONS_0000_Layer-1.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="SkyeCDesc" class="Description">
+                            <h4 class="mt-3">C - REGROWTH</h4>
+                            <p class="contentJustify">EQUIP a healing trinket. HOLD FIRE to channel, healing allies in range and line of sight. Can be reused until her healing pool is depleted. Skye cannot heal herself.</p>
+                        </div>
+                        <div id="SkyeEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - GUIDING LIGHT</h4>
+                            <p class="contentJustify">EQUIP a hawk trinket. FIRE to send it forward. HOLD FIRE to guide the hawk in the direction of your crosshair. RE-USE while the hawk is in flight to transform it into a flash that plays a hit confirm if an enemy was within range and line of sight.</p>
+                        </div>
+                        <div id="SkyeQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - TRAILBLAZER</h4>
+                            <p class="contentJustify">EQUIP a Tasmanian tiger trinket. FIRE to send out and take control of the predator. While in control, FIRE to leap forward, exploding in a concussive blast and damaging directly hit enemies.</p>
+                        </div>
+                        <div id="SkyeXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - SEEKERS</h4>
+                            <p class="contentJustify">EQUIP a Seeker trinket. FIRE to send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it nearsights them.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Skye/Val_Skye_C_Ability_Web.mp4" class="Video videoprev" muted loop autoplay id="SkyeC">
+                        <source src="/pictures/valorant_charatcers/Skye/Val_Skye_C_Ability_Web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_E_Ability_Web.mp4" class="Video videoprev" muted loop autoplay id="SkyeE">
+                        <source src="/pictures/valorant_charatcers/Skye/Val_Skye_E_Ability_Web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_Q_Ability_Web.mp4" class="Video videoprev" muted loop autoplay id="SkyeQ">
+                        <source src="/pictures/valorant_charatcers/Skye/Val_Skye_Q_Ability_Web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_X_Ability_Web.mp4" class="Video videoprev" muted loop autoplay id="SkyeX">
+                        <source src="/pictures/valorant_charatcers/Skye/Val_Skye_X_Ability_Web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="ViperDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(ViperC, ViperCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Viper/TX_Viper_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ViperE, ViperEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Viper/TX_Viper_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ViperQ, ViperQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Viper/TX_Viper_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ViperX, ViperXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Viper/TX_Viper_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="ViperCDesc" class="Description">
+                            <h4 class="mt-3">C - SNAKE BITE</h4>
+                            <p class="contentJustify">EQUIP a chemical launcher. FIRE to launch a canister that shatters upon hitting the floor, creating a lingering chemical zone that damages and slows enemies.</p>
+                        </div>
+                        <div id="ViperEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - TOXIC SCREEN</h4>
+                            <p class="contentJustify">EQUIP a gas emitter launcher. FIRE to deploy a long line of gas emitters. RE-USE the ability to create a tall wall of toxic gas at the cost of fuel. This ability can be RE-USED more than once.</p>
+                        </div>
+                        <div id="ViperQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - POISON CLOUD</h4>
+                            <p class="contentJustify">EQUIP a gas emitter. FIRE to throw the emitter that perpetually remains throughout the round. RE-USE the ability to create a toxic gas cloud at the cost of fuel. This ability can be RE-USED more than once and can be picked up to be REDEPLOYED.</p>
+                        </div>
+                        <div id="ViperXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - VIPER’S PIT</h4>
+                            <p class="contentJustify">EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Viper/Viper_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="ViperC">
+                        <source src="/pictures/valorant_charatcers/Viper/Viper_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="ViperE">
+                        <source src="/pictures/valorant_charatcers/Viper/Viper_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="ViperQ">
+                        <source src="/pictures/valorant_charatcers/Viper/Viper_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="ViperX">
+                        <source src="/pictures/valorant_charatcers/Viper/Viper_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="YoruDesc" style="display:none">
+            <div class="row">
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(YoruC, YoruCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Yoru/TX_Yoru_Fakeout.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(YoruE, YoruEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Yoru/yoru_ability_icons_52x512_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(YoruQ, YoruQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Yoru/Yoru_Anility_Icons_512x512_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(YoruX, YoruXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Yoru/Yoru_Anility_Icons_512x512_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="YoruCDesc" class="Description">
+                            <h4 class="mt-3">C - FAKEOUT</h4>
+                            <p class="contentJustify">EQUIP an echo that transforms into a mirror image of Yoru when activated FIRE to instantly activate the mirror image and send it forward ALT FIRE to place an inactive echo USE to transform an inactive echo into a mirror image and send it forward. Mirror images explode in a blinding flash when destroyed by enemies.</p>
+                        </div>
+                        <div id="YoruEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - GATECRASH</h4>
+                            <p class="contentJustify">EQUIP a rift tether FIRE to send the tether forward ALT FIRE to place a stationary tether ACTIVATE to teleport to the tether's location USE to trigger a fake teleport</p>
+                        </div>
+                        <div id="YoruQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - BLINDSIDE</h4>
+                            <p class="contentJustify">EQUIP to rip an unstable dimensional fragment from reality. FIRE to throw the fragment, activating a flash that winds up once it collides with a hard surface in world.</p>
+                        </div>
+                        <div id="YoruXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - DIMENSIONAL DRIFT</h4>
+                            <p class="contentJustify">EQUIP a mask that can see between dimensions. FIRE to drift into Yoru's dimension, unable to be affected or seen by enemies from the outside</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 itemCentered itemCenteredValo">
+                    <video src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Fakeout_v2.mp4" class="Video videoprev" muted loop autoplay id="YoruC">
+                        <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Fakeout_v2.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Yoru_Abilities_Blinding_1_1.mp4" class="Video videoprev" muted loop autoplay id="YoruE">
+                        <source src="/pictures/valorant_charatcers/Yoru/Yoru_Abilities_Blinding_1_1.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Gatecrash_v2.mp4" class="Video videoprev" muted loop autoplay id="YoruQ">
+                        <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Gatecrash_v2.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" class="Video videoprev" muted loop autoplay id="YoruX">
+                        <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        //Others
+        var activeVideo;
+        var activeButton;
+        var activeDesc;
+        var activeAgent;
+
+        //Brimstone Ability Videos
+        var BrimC = document.getElementById("BrimC");
+        var BrimE = document.getElementById("BrimE");
+        var BrimQ = document.getElementById("BrimQ");
+        var BrimX = document.getElementById("BrimX");
+        //Brimstone Ability Desctiptions
+        var BrimCDesc = document.getElementById("BrimCDesc");
+        var BrimEDesc = document.getElementById("BrimEDesc");
+        var BrimQDesc = document.getElementById("BrimQDesc");
+        var BrimXDesc = document.getElementById("BrimXDesc");
+
+        //Agent desctiptions
+        var BrimDesc = document.getElementById("BrimDesc");
+        var AstraDesc = document.getElementById("AstraDesc");
+        var BreachDesc = document.getElementById("BreachDesc");
+        var ChamberDesc = document.getElementById("ChamberDesc");
+        var CypherDesc = document.getElementById("CypherDesc");
+        var JettDesc = document.getElementById("JettDesc");
+        var KayoDesc = document.getElementById("KayoDesc");
+        var KilljoyDesc = document.getElementById("KilljoyDesc");
+        var NeonDesc = document.getElementById("NeonDesc");
+        var OmenDesc = document.getElementById("OmenDesc");
+        var PhoenixDesc = document.getElementById("PhoenixDesc");
+        var RazeDesc = document.getElementById("RazeDesc");
+        var ReynaDesc = document.getElementById("ReynaDesc");
+        var SageDesc = document.getElementById("SageDesc");
+        var SkyeDesc = document.getElementById("SkyeDesc");
+        var ViperDesc = document.getElementById("ViperDesc");
+        var YoruDesc = document.getElementById("YoruDesc");
+
+        function setDef() {
+            activeDesc = BrimCDesc;
+            activeVideo = BrimC;
+            activeButton = document.getElementsByClassName("abilityButtons")[0];
+            activeAgent = BrimDesc;
+        }
+
+        function SwitchDivs(div, desc, btn) {
+            activeVideo.style.display = "none";
+            activeButton.childNodes[0].classList.remove("abilityActive");
+            activeDesc.style.display = "none";
+
+            activeVideo = div;
+            activeButton = btn;
+            activeDesc = desc;
+
+            activeDesc.style.display = "block";
+            activeVideo.style.display = "block";
+            activeButton.childNodes[0].classList.add("abilityActive");
+        }
+
+        function SwitchAgents() {
+            let newAgent = document.getElementById("AgentSelector").value;
+            if (newAgent == "brimstone") {
+                ChangeAgent(activeAgent, BrimDesc);
+            } else if (newAgent == "astra") {
+                ChangeAgent(activeAgent, AstraDesc);
+            } else if (newAgent == "breach") {
+                ChangeAgent(activeAgent, BreachDesc);
+            } else if (newAgent == "chamber") {
+                ChangeAgent(activeAgent, ChamberDesc);
+            } else if (newAgent == "cypher") {
+                ChangeAgent(activeAgent, CypherDesc);
+            } else if (newAgent == "jett") {
+                ChangeAgent(activeAgent, JettDesc);
+            } else if (newAgent == "kayo") {
+                ChangeAgent(activeAgent, KayoDesc);
+            } else if (newAgent == "killjoy") {
+                ChangeAgent(activeAgent, KilljoyDesc);
+            } else if (newAgent == "neon") {
+                ChangeAgent(activeAgent, NeonDesc);
+            } else if (newAgent == "omen") {
+                ChangeAgent(activeAgent, OmenDesc);
+            } else if (newAgent == "phoenix") {
+                ChangeAgent(activeAgent, PhoenixDesc);
+            } else if (newAgent == "raze") {
+                ChangeAgent(activeAgent, RazeDesc);
+            } else if (newAgent == "reyna") {
+                ChangeAgent(activeAgent, ReynaDesc);
+            } else if (newAgent == "sage") {
+                ChangeAgent(activeAgent, SageDesc);
+            } else if (newAgent == "skye") {
+                ChangeAgent(activeAgent, SkyeDesc);
+            } else if (newAgent == "viper") {
+                ChangeAgent(activeAgent, ViperDesc);
+            } else if (newAgent == "yoru") {
+                ChangeAgent(activeAgent, YoruDesc);
+            }
+            setNewActives();
+        }
+
+        function ChangeAgent(oldAgent, newAgent) {
+            oldAgent.style.display = "none";
+            newAgent.style.display = "block";
+            activeAgent = newAgent;
+            return;
+        }
+
+        function setNewActives() {
+            activeVideo = activeAgent.getElementsByClassName("Video")[0];
+            activeButton = activeAgent.getElementsByClassName("abilityButtons")[0];
+            activeDesc = activeAgent.getElementsByClassName("Description")[0];
+            console.log(activeDesc);
+            return;
+        }
+    </script>
+    <!--SlideShow-->
+    <div class="slideShowBgColor backgroundImage mt-5">
+        <hr style="background-color:#bdbcb7;">
+        <h1 class="slideShowText">Maps</h1>
+        <div class="col-8 mx-auto py-3 slideShowResize">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="/pictures/valorant_maps/fracture.png" class="d-block w-100 slideshowCostu" alt="fracture">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/pictures/valorant_maps/breeze.png" class="d-block w-100 slideshowCostu" alt="breeze">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/pictures/valorant_maps/icebox.png" class="d-block w-100 slideshowCostu" alt="icebox">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/pictures/valorant_maps/bind.png" class="d-block w-100 slideshowCostu" alt="bind">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="/pictures/valorant_maps/haven.png" class="d-block w-100 slideshowCostu" alt="haven">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/pictures/valorant_maps/split.png" class="d-block w-100 slideshowCostu" alt="split">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/pictures/valorant_maps/ascent.png" class="d-block w-100 slideshowCostu" alt="ascent">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <style>
+        @media screen and (max-width: 1050px) {}
+
+        .backgroundImage {
+            background-color: #bdbcb7 !important;
+            background: url("/pictures/valorant_charatcers/letöltés.png");
+
+        }
+
+        .itemCentered {
+            padding-top: 10%;
+            padding-left: 20%;
+        }
+
+        hr:not([size]) {
+            height: 10px;
+        }
+
+        .abilityActive {
+            background-color: #ff4655;
+            filter: brightness(1) !important;
+            border: 1px solid white !important;
+        }
+
+        .videoprev {
+            vertical-align: middle;
+            padding-top: 3.5vw;
+            max-width: 80%;
+            height: auto;
+        }
+
+        .abilityIcons {
+            width: 4vw;
+            border: 1px solid #bdbcb7;
+            filter: brightness(1);
+            margin-right: 0px;
+            padding: 8px;
+
+        }
+
+        .abilityButtons {
+            padding-top: 15px;
+            all: unset;
+            width: 4vw;
+            margin-right: 20px;
+        }
+
+        .slideShowText {
+            color: #0f1923;
+            margin: 0 0 0 10vw;
+            padding-top: 2vw;
+        }
+
+        .abilityHover:hover {
+            background-color: #ff4655;
+            filter: brightness(1);
+            border: 1px solid white;
+
+        }
+
+        .itemCenteredValo {
+            padding-left: 20%;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .itemCenteredValo {
+                padding-left: 20%;
+                padding-top: 5%;
+            }
+
+            .abilityIcons {
+                width: 10vw;
+            }
+
+            .abilityButtons {
+                width: 10vw;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .itemCenteredValo {
+                padding-left: 0;
+                padding-top: 0;
+            }
+
+            .abilityIcons {
+                width: 5vw;
+            }
+
+            .abilityButtons {
+                width: 5vw;
+            }
+        }
+
+        .contentJustify {
+            text-align: justify;
+            margin-right: 20%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .pictureFormat {
+                width: 45vw !important;
+
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .pictureFormat {
+                width: 70vw !important;
+                margin-left: 10vw;
+
+            }
+
+        }
+
+    </style>
 </body>
 
 </html>
