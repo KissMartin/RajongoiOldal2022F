@@ -44,72 +44,765 @@
         </div>
     </nav>
     <div class="divSizing container-fluid">
-        <div class="row">
-            <div class="col-lg-5 col-8">
-                <select name="dropdownMenu" onchange="">
-                    <option value="brimstone">Brimstone</option>
-                    <option value="astra">Astra</option>
-                    <option value="breach">Breach</option>
-                    <option value="chamber">Chamber</option>
-                    <option value="cypher">Cypher</option>
-                    <option value="jett">Jett</option>
-                    <option value="kayo">Kayo</option>
-                    <option value="killjoy">Killjoy</option>
-                    <option value="neon">Neon</option>
-                    <option value="omen">Omen</option>
-                    <option value="phoenix">Phoenix</option>
-                    <option value="Raze">Raze</option>
-                    <option value="reyna">Reyna</option>
-                    <option value="sage">Sage</option>
-                    <option value="skye">Skye</option>
-                    <option value="viper">Viper</option>
-                    <option value="yoru">Yoru</option>
-                </select>
-                <h6 class="mb-5 mt-4">Képességek</h6>
-                <div class="itemCentered">
-                    <button class="abilityButtons" onclick="SwitchDivs(BrimC, BrimCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
-                    <button class="abilityButtons" onclick="SwitchDivs(BrimE, BrimEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
-                    <button class="abilityButtons" onclick="SwitchDivs(BrimQ, BrimQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
-                    <button class="abilityButtons" onclick="SwitchDivs(BrimX, BrimXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
-                    <div id="BrimCDesc">
-                        <h4 class="mt-3">C - STIM BEACON</h4>
-                        <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
-                    </div>
-                    <div id="BrimEDesc" style="display: none;">
-                        <h4 class="mt-3">E - SKY SMOKE</h4>
-                        <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
-                    </div>
-                    <div id="BrimQDesc" style="display: none;">
-                        <h4 class="mt-3">Q - INCENDIARY</h4>
-                        <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
-                    </div>
-                    <div id="BrimXDesc" style="display: none;">
-                        <h4 class="mt-3">X - ORBITAL STRIKE</h4>
-                        <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+        <select name="dropdownMenu" id="AgentSelector" onchange="SwitchAgents()">
+            <option value="brimstone">Brimstone</option>
+            <option value="astra">Astra</option>
+            <option value="breach">Breach</option>
+            <option value="chamber">Chamber</option>
+            <option value="cypher">Cypher</option>
+            <option value="jett">Jett</option>
+            <option value="kayo">Kayo</option>
+            <option value="killjoy">Killjoy</option>
+            <option value="neon">Neon</option>
+            <option value="omen">Omen</option>
+            <option value="phoenix">Phoenix</option>
+            <option value="Raze">Raze</option>
+            <option value="reyna">Reyna</option>
+            <option value="sage">Sage</option>
+            <option value="skye">Skye</option>
+            <option value="viper">Viper</option>
+            <option value="yoru">Yoru</option>
+        </select>
+        <div id="BrimDesc">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(BrimC, BrimCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BrimE, BrimEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BrimQ, BrimQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BrimX, BrimXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="BrimCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="BrimEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="BrimQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="BrimXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
                     </div>
                 </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimC">
+                        <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimE">
+                        <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimQ">
+                        <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimX">
+                        <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
-            <div class="col-7 m">
-                <video src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" muted loop autoplay class="videoprev" id="BrimC">
-                    <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" type="video/mp4">
-                </video>
-                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" muted loop autoplay class="videoprev" id="BrimE">
-                    <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" type="video/mp4">
-                </video>
-                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" muted loop autoplay class="videoprev" id="BrimQ">
-                    <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" type="video/mp4">
-                </video>
-                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" muted loop autoplay class="videoprev" id="BrimX">
-                    <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" type="video/mp4">
-                </video>
+        </div>
+        <div id="AstraDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(AstraC, AstraCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(AstraE, AstraEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(AstraQ, AstraQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(AstraX, AstraXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="AstraCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="AstraEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="AstraQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="AstraXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_C.mp4" class="Video" muted loop autoplay class="videoprev" id="AstraC">
+                        <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_C.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" class="Video" muted loop autoplay class="videoprev" id="AstraE">
+                        <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_Q.mp4" class="Video" muted loop autoplay class="videoprev" id="AstraQ">
+                        <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_Q.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_ULT.mp4" class="Video" muted loop autoplay class="videoprev" id="AstraX">
+                        <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_ULT.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="BreachDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(BreachC, BreachDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BreachE, BreachEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BreachQ, BreachQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(BreachX, BreachXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="BreachCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="BreachEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="BreachQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="BreachXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Breach/Breach_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BreachC">
+                        <source src="/pictures/valorant_charatcers/Breach/Breach_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BreachE">
+                        <source src="/pictures/valorant_charatcers/Breach/Breach_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BreachQ">
+                        <source src="/pictures/valorant_charatcers/Breach/Breach_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BreachX">
+                        <source src="/pictures/valorant_charatcers/Breach/Breach_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="ChamberDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(ChamberC, ChamberCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ChamberE, ChamberEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ChamberQ, ChamberQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ChamberX,ChamberXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="ChamberCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="ChamberEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="ChamberQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="ChamberXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_C.mp4" class="Video" muted loop autoplay class="videoprev" id="ChamberC">
+                        <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_C.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_E.mp4" class="Video" muted loop autoplay class="videoprev" id="ChamberE">
+                        <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_E.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_Q.mp4" class="Video" muted loop autoplay class="videoprev" id="ChamberQ">
+                        <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_Q.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_X.mp4" class="Video" muted loop autoplay class="videoprev" id="ChamberX">
+                        <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_X.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="CypherDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(CypherC, CypherDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(CypherE, CypherEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(CypherQ, CypherQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(CypherX, CypherXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="CypherCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="CypherEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="CypherQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="CypherXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Cypher/Cypher_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="CypherC">
+                        <source src="/pictures/valorant_charatcers/Cypher/Cypher_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="CypherE">
+                        <source src="/pictures/valorant_charatcers/Cypher/Cypher_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="CypherQ">
+                        <source src="/pictures/valorant_charatcers/Cypher/Cypher_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="CypherX">
+                        <source src="/pictures/valorant_charatcers/Cypher/Cypher_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="JettDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(JettC, JettCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(JettE, JettEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(JettQ, JettQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(JettX, JettXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="JettCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="JettEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="JettQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="JettXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Jett/Jett_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="JettC">
+                        <source src="/pictures/valorant_charatcers/Jett/Jett_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="JettE">
+                        <source src="/pictures/valorant_charatcers/Jett/Jett_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="JettQ">
+                        <source src="/pictures/valorant_charatcers/Jett/Jett_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="JettX">
+                        <source src="/pictures/valorant_charatcers/Jett/Jett_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="KayoDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(KayoC, KayoCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KayoE, KayoEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KayoQ, KayoQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KayoX, KayoXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="KayoCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="KayoEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="KayoQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="KayoXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Kayo/KAYO_C_v002_web.mp4" class="Video" muted loop autoplay class="videoprev" id="KayoC">
+                        <source src="/pictures/valorant_charatcers/Kayo/KAYO_C_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_E_v002_web.mp4" class="Video" muted loop autoplay class="videoprev" id="KayoE">
+                        <source src="/pictures/valorant_charatcers/Kayo/KAYO_E_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="KayoQ">
+                        <source src="/pictures/valorant_charatcers/Kayo/KAYO_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_X_v003_web.mp4" class="Video" muted loop autoplay class="videoprev" id="KayoX">
+                        <source src="/pictures/valorant_charatcers/Kayo/KAYO_X_v003_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="KilljoyDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(KilljoyC, KilljoyCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KilljoyE, KilljoyEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KilljoyQ, KilljoyQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(KilljoyX, KilljoyXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="KilljoyCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="KilljoyEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="KilljoyQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="KilljoyXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Killjoy/Grenade_LowQuality.mp4" class="Video" muted loop autoplay class="videoprev" id="KilljoyC">
+                        <source src="/pictures/valorant_charatcers/Killjoy/Grenade_LowQuality.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/Turret_LowQuality.mp4" class="Video" muted loop autoplay class="videoprev" id="KilljoyE">
+                        <source src="/pictures/valorant_charatcers/Killjoy/Turret_LowQuality.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/AlarmBot_LowQuality.mp4" class="Video" muted loop autoplay class="videoprev" id="KilljoyQ">
+                        <source src="/pictures/valorant_charatcers/Killjoy/AlarmBot_LowQuality.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/Ultimate_LowQualityV02.mp4" class="Video" muted loop autoplay class="videoprev" id="KilljoyX">
+                        <source src="/pictures/valorant_charatcers/Killjoy/Ultimate_LowQuality.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="NeonDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(NeonC, NeonCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(NeonE, NeonEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(NeonQ, NeonQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(NeonX, NeonXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="NeonCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="NeonEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="NeonQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="NeonXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-C_Preview_Walls_noHUD_Web_h264.mp4" class="Video" muted loop autoplay class="videoprev" id="NeonC">
+                        <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-C_Preview_Walls_noHUD_Web_h264.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-E_Preview_Sprint_noHUD_Web_h264.mp4" class="Video" muted loop autoplay class="videoprev" id="NeonE">
+                        <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-E_Preview_Sprint_noHUD_Web_h264.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-Q_Preview_Stun_noHUD_Web_h264.mp4" class="Video" muted loop autoplay class="videoprev" id="NeonQ">
+                        <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-Q_Preview_Stun_noHUD_Web_h264.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-X_Preview_Ult_noHUD_Web_h264.mp4" class="Video" muted loop autoplay class="videoprev" id="NeonX">
+                        <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-X_Preview_Ult_noHUD_Web_h264.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="OmenDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(OmenC, OmenCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(OmenE, OmenEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(OmenQ, OmenQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(OmenX, OmenXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="OmenCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="OmenEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="OmenQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="OmenXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Omen/Omen_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="OmenC">
+                        <source src="/pictures/valorant_charatcers/Omen/Omen_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="OmenE">
+                        <source src="/pictures/valorant_charatcers/Omen/Omen_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="OmenQ">
+                        <source src="/pictures/valorant_charatcers/Omen/Omen_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="OmenX">
+                        <source src="/pictures/valorant_charatcers/Omen/Omen_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="PhoenixDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(PhoenixC, PhoenixCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(PhoenixE, PhoenixEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(PhoenixQ, PhoenixQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(PhoenixX, PhoenixXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="PhoenixCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="PhoenixEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="PhoenixQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="PhoenixXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Phoenix/Phoenix_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="PhoenixC">
+                        <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="PhoenixE">
+                        <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="PhoenixQ">
+                        <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="PhoenixX">
+                        <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="RazeDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(RazeC, RazeCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(RazeE, RazeEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(RazeQ, RazeQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(RazeX, RazeXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="RazeCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="RazeEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="RazeQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="RazeXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Raze/Raze_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="RazeC">
+                        <source src="/pictures/valorant_charatcers/Raze/Raze_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="RazeE">
+                        <source src="/pictures/valorant_charatcers/Raze/Raze_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="RazeQ">
+                        <source src="/pictures/valorant_charatcers/Raze/Raze_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="RazeX">
+                        <source src="/pictures/valorant_charatcers/Raze/Raze_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="ReynaDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(ReynaC, ReynaCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ReynaE, ReynaEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ReynaQ, ReynaQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ReynaX, ReynaXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="ReynaCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="ReynaEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="ReynaQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="ReynaXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Reyna/Reyna_C_v002_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ReynaC">
+                        <source src="/pictures/valorant_charatcers/Reyna/Reyna_C_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_E_v002_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ReynaE">
+                        <source src="/pictures/valorant_charatcers/Reyna/Reyna_E_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ReynaQ">
+                        <source src="/pictures/valorant_charatcers/Reyna/Reyna_Q_v002_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ReynaX">
+                        <source src="/pictures/valorant_charatcers/Reyna/Reyna_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="SageDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(SageC, SageCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SageE, SageEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SageQ, SageQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SageX, SageXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="SageCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="SageEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="SageQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="SageXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Sage/Sage_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimC">
+                        <source src="/pictures/valorant_charatcers/Sage/Sage_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="SageE">
+                        <source src="/pictures/valorant_charatcers/Sage/Sage_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="SageQ">
+                        <source src="/pictures/valorant_charatcers/Sage/Sage_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="SageX">
+                        <source src="/pictures/valorant_charatcers/Sage/Sage_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="SkyeDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(SkyeC, SkyeCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SkyeE, SkyeEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SkyeQ, SkyeQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(SkyeX, SkyeXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="SkyeCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="SkyeEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="SkyeQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="SkyeXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Skye/Val_Skye_C_Ability_Web.mp4" class="Video" muted loop autoplay class="videoprev" id="SkyeC">
+                        <source src="/pictures/valorant_charatcers/Skye/Val_Skye_C_Ability_Web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_E_Ability_Web.mp4" class="Video" muted loop autoplay class="videoprev" id="SkyeE">
+                        <source src="/pictures/valorant_charatcers/Skye/Val_Skye_E_Ability_Web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_Q_Ability_Web.mp4" class="Video" muted loop autoplay class="videoprev" id="SkyeQ">
+                        <source src="/pictures/valorant_charatcers/Skye/Val_Skye_Q_Ability_Web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_X_Ability_Web.mp4" class="Video" muted loop autoplay class="videoprev" id="SkyeX">
+                        <source src="/pictures/valorant_charatcers/Skye/Val_Skye_X_Ability_Web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="ViperDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(ViperC, ViperCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ViperE, ViperEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ViperQ, ViperQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(ViperX, ViperXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="ViperCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="ViperEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="ViperQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="ViperXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Viper/Viper_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ViperC">
+                        <source src="/pictures/valorant_charatcers/Viper/Viper_C_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ViperE">
+                        <source src="/pictures/valorant_charatcers/Viper/Viper_E_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ViperQ">
+                        <source src="/pictures/valorant_charatcers/Viper/Viper_Q_v001_web.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ViperX">
+                        <source src="/pictures/valorant_charatcers/Viper/Viper_X_v001_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="YoruDesc" style="display:none">
+            <div class="row">
+                <div class="col-lg-5 col-8">
+                    <h6 class="mb-5 mt-4">Képességek</h6>
+                    <div class="itemCentered">
+                        <button class="abilityButtons" onclick="SwitchDivs(YoruC, YoruCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(YoruE, YoruEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(YoruQ, YoruQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                        <button class="abilityButtons" onclick="SwitchDivs(YoruX, YoruXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                        <div id="YoruCDesc" class="Description">
+                            <h4 class="mt-3">C - STIM BEACON</h4>
+                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                        </div>
+                        <div id="YoruEDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">E - SKY SMOKE</h4>
+                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                        </div>
+                        <div id="YoruQDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">Q - INCENDIARY</h4>
+                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                        </div>
+                        <div id="YoruXDesc" class="Description" style="display: none;">
+                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 m">
+                    <video src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" class="Video" muted loop autoplay class="videoprev" id="YoruC">
+                        <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" class="Video" muted loop autoplay class="videoprev" id="YoruE">
+                        <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" class="Video" muted loop autoplay class="videoprev" id="YoruQ">
+                        <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" type="video/mp4">
+                    </video>
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" class="Video" muted loop autoplay class="videoprev" id="YoruX">
+                        <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
     </div>
     <script>
+
+        //Others
         var activeVideo;
         var activeButton;
         var activeDesc;
-        
+        var activeAgent;
+
         //Brimstone Ability Videos
         var BrimC = document.getElementById("BrimC");
         var BrimE = document.getElementById("BrimE");
@@ -121,10 +814,30 @@
         var BrimQDesc = document.getElementById("BrimQDesc");
         var BrimXDesc = document.getElementById("BrimXDesc");
 
+        //Agent desctiptions
+        var BrimDesc = document.getElementById("BrimDesc");
+        var AstraDesc = document.getElementById("AstraDesc");
+        var BreachDesc = document.getElementById("BreachDesc");
+        var ChamberDesc = document.getElementById("ChamberDesc");
+        var CypherDesc = document.getElementById("CypherDesc");
+        var JettDesc = document.getElementById("JettDesc");
+        var KayoDesc = document.getElementById("KayoDesc");
+        var KilljoyDesc = document.getElementById("KilljoyDesc");
+        var NeonDesc = document.getElementById("NeonDesc");
+        var OmenDesc = document.getElementById("OmenDesc");
+        var PhoenixDesc = document.getElementById("PhoenixDesc");
+        var RazeDesc = document.getElementById("RazeDesc");
+        var ReynaDesc = document.getElementById("ReynaDesc");
+        var SageDesc = document.getElementById("SageDesc");
+        var SkyeDesc = document.getElementById("SkyeDesc");
+        var ViperDesc = document.getElementById("ViperDesc");
+        var YoruDesc = document.getElementById("YoruDesc");
+
         function setDef() {
             activeDesc = BrimCDesc;
             activeVideo = BrimC;
             activeButton = document.getElementsByClassName("abilityButtons")[0];
+            activeAgent = BrimDesc;
         }
 
         function SwitchDivs(div, desc, btn){
@@ -139,6 +852,61 @@
             activeDesc.style.display = "block";
             activeVideo.style.display = "block";
             activeButton.childNodes[0].classList.add("abilityActive");
+        }
+
+        function SwitchAgents(){
+            let newAgent = document.getElementById("AgentSelector").value;
+            if(newAgent == "brimstone"){
+                ChangeAgent(activeAgent, BrimDesc);    
+            }else if(newAgent == "astra"){
+                ChangeAgent(activeAgent, AstraDesc);
+            }else if(newAgent == "breach"){
+                ChangeAgent(activeAgent, BreachDesc);
+            }else if(newAgent == "chamber"){
+                ChangeAgent(activeAgent, ChamberDesc);
+            }else if(newAgent == "cypher"){
+                ChangeAgent(activeAgent, CypherDesc);
+            }else if(newAgent == "jett"){
+                ChangeAgent(activeAgent, JettDesc);
+            }else if(newAgent == "kayo"){
+                ChangeAgent(activeAgent, KayoDesc);
+            }else if(newAgent == "killjoy"){
+                ChangeAgent(activeAgent, KilljoyDesc);
+            }else if(newAgent == "neon"){
+                ChangeAgent(activeAgent, NeonDesc);
+            }else if(newAgent == "omen"){
+                ChangeAgent(activeAgent, OmenDesc);
+            }else if(newAgent == "phoenix"){
+                ChangeAgent(activeAgent, PhoenixDesc);
+            }else if(newAgent == "raze"){
+                ChangeAgent(activeAgent, RazeDesc);
+            }else if(newAgent == "reyna"){
+                ChangeAgent(activeAgent, ReynaDesc);
+            }else if(newAgent == "sage"){
+                ChangeAgent(activeAgent, SageDesc);
+            }else if(newAgent == "skye"){
+                ChangeAgent(activeAgent, SkyeDesc);
+            }else if(newAgent == "viper"){
+                ChangeAgent(activeAgent, ViperDesc);
+            }else if(newAgent == "yoru"){
+                ChangeAgent(activeAgent, YoruDesc);
+            }
+            setNewActives();
+        }
+
+        function ChangeAgent(oldAgent, newAgent){
+            oldAgent.style.display = "none";
+            newAgent.style.display = "block";
+            activeAgent = newAgent;
+            return;
+        }
+
+        function setNewActives(){
+            activeVideo = activeAgent.getElementsByClassName("Video")[0];
+            activeButton = activeAgent.getElementsByClassName("abilityButtons")[0];
+            activeDesc = activeAgent.getElementsByClassName("Description")[0];
+            console.log(activeDesc);
+            return;
         }
 
     </script>
@@ -197,6 +965,9 @@
             background-color: #bdbcb7 !important;
             background: url("/pictures/valorant_charatcers/letöltés.png");
             
+        }
+        .Video{
+            width: 50vw;
         }
         .itemCentered{
             padding-top: 10%;
