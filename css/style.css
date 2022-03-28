@@ -1,6 +1,6 @@
 @import url(//db.onlinewebfonts.com/c/01d273202731e44f0f1187f3afcaf156?family=Mark+Pro);
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -54,7 +54,7 @@ body {
     0 10px 30px -10px rgb(111 111 255 / 25%) !important;
 }
 
-.Arcane_img {
+.header {
   width: 100%;
   z-index: 0;
 }
@@ -113,52 +113,50 @@ body {
   display: block;
 }
 
-.comment{
+.comment {
   color: white;
-  
 }
-.comments{
+.comments {
   width: 30%;
   height: auto;
   margin: 50px auto 0;
 }
-.spacer{
+.spacer {
   margin: 150px auto 0;
-  width:50%;
-  height:1px;
+  width: 50%;
+  height: 1px;
   background-color: white;
-
 }
-.form-counter{
+.form-counter {
   text-decoration: none;
 }
-.form-holder{
-  width:100%;
-  height:200px;
+.form-holder {
+  width: 100%;
+  height: 200px;
   margin-top: 100px;
 }
-textarea[placeholder="*Megjegyzés"]{
+textarea[placeholder="*Megjegyzés"] {
   resize: none;
 }
 input[placeholder="Felhasználónév"],
-textarea[placeholder="*Megjegyzés"]{
+textarea[placeholder="*Megjegyzés"] {
   outline: none;
   width: 30vw;
 }
-label[for="comment"]{
+label[for="comment"] {
   display: none;
   font-size: small;
 }
 @media screen and (max-width: 991px) {
   input[placeholder="Felhasználónév"],
-  textarea[placeholder="*Megjegyzés"]{
+  textarea[placeholder="*Megjegyzés"] {
     outline: none;
     width: 40vw;
   }
-  .comments{
-    width:70%;
+  .comments {
+    width: 70%;
   }
-  .spacer{
+  .spacer {
     width: 80%;
   }
 }
@@ -167,28 +165,337 @@ label[for="comment"]{
   height: 40vw;
 }
 
-table, th, td{
+table,
+th,
+td {
   border: 1px solid #f9f9f9;
   padding: 5px;
 }
 
-.tableCostu{
+.tableCostu {
   width: 100%;
 }
 
 @media screen and (max-width: 750px) {
-  .contentResize{
-      max-width: 600px;
-      width: 100%;
+  .contentResize {
+    max-width: 600px;
+    width: 100%;
   }
-  .pictureResize{
-      width: 200px;
+  .pictureResize {
+    width: 200px;
   }
-  .tableResize{
-      width: 100%;
+  .tableResize {
+    width: 100%;
   }
-  .slideShowResize{
+  .slideShowResize {
     width: 85%;
     height: 50%;
   }
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 100%;
+}
+.to-form-button {
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  color: #f9f9f9;
+  display: inline-block;
+  background-color: #a32629;
+  box-shadow: 0 10px 45px -10px rgb(255 111 111 / 15%),
+    0 0 20px -10px rgb(255 111 111 / 35%),
+    0 10px 30px -10px rgb(255 111 111 / 25%);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.25s all ease;
+  margin-bottom: 50px;
+}
+.to-form-button:hover {
+  color: inherit;
+  background-color: #5032d5 !important;
+  box-shadow: 0 10px 45px -10px rgb(111 111 255 / 15%),
+    0 0 20px -10px rgb(111 111 255 / 35%),
+    0 10px 30px -10px rgb(111 111 255 / 25%) !important;
+}
+a[target="_blank"] {
+  text-decoration: none;
+  color: inherit;
+  padding: 6px 0;
+  display: inline-block;
+  transition: 0.2s color;
+}
+a[target="_blank"]:hover {
+  background: linear-gradient(315deg, #6757d3 0%, #f53844 100%);
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.marginLeft {
+  margin-left: 1vw;
+}
+.buttonVisit{
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  color: #f9f9f9;
+  display: inline-block;
+  background-color: #a32629;
+  box-shadow: 0 10px 45px -10px rgb(255 111 111 / 15%),
+    0 0 20px -10px rgb(255 111 111 / 35%),
+    0 10px 30px -10px rgb(255 111 111 / 25%);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.25s all ease;
+  margin-bottom: 50px;
+}
+.buttonVisit:hover{
+  color: inherit;
+  background-color: #5032d5 !important;
+  box-shadow: 0 10px 45px -10px rgb(111 111 255 / 15%),
+    0 0 20px -10px rgb(111 111 255 / 35%),
+    0 10px 30px -10px rgb(111 111 255 / 25%) !important;
+}
+body {
+  overflow-x: hidden;
+}
+
+.main-welcome {
+  background-color: black;
+  height: 40vw;
+  width: 100%;
+  text-align: center;
+}
+
+.main-welcome-png {
+  height: 100%;
+  width: auto;
+}
+
+.main-text {
+  width: 100%;
+  height: 50vh;
+}
+
+.main-text h1 {
+  font-size: 2vw;
+}
+
+.main-text p {
+  font-size: 1vw;
+}
+
+.main-text .col-6 {
+  width: 40vw;
+  margin: 10px 20px;
+}
+
+@media screen and (max-width: 1250px) {
+  .main-welcome {
+    height: 50vw;
+  }
+
+  .main-text .col-6 {
+    width: 90%;
+    margin: 2vh 0 !important;
+  }
+
+  .main-text h1 {
+    font-size: 4vw;
+  }
+
+  .main-text p {
+    font-size: 2vw;
+  }
+
+  .main-text {
+    height: 120vw;
+  }
+}
+@media screen and (max-width: 660px) {
+  .main-welcome {
+    height: 50vw;
+  }
+
+  .main-text .col-6 {
+    width: 90%;
+    margin: 2vh 0 !important;
+  }
+
+  .main-text h1 {
+    font-size: 4vw;
+  }
+
+  .main-text p {
+    font-size: 3vw;
+  }
+
+  .main-text {
+    height: 120vw;
+  }
+}
+
+.main-games {
+  width: 100%;
+  height: 30vw;
+  background-color: rgb(0, 0, 49);
+  transition: all .2s;
+}
+
+.main-games-card {
+  position: relative;
+  outline: none;
+  border: none;
+  margin: 0 20px;
+  transition: all .2s ease-in-out;
+}
+
+.main-games-card:hover {
+  transform: scale(1.05);
+}
+
+.main-games-logo {
+  position: absolute;
+  top: 30%;
+  left: 3vw;
+  transform: translateY(-50%);
+  width: 8vw !important;
+  transition: all .2s;
+}
+
+.main-games-card-desc {
+  position: absolute;
+  top: 80%;
+  left: 2vw;
+  transform: translateY(-50%);
+  width: 10vw;
+  font-size: 0.8vw !important;
+  transition: all .2s;
+}
+
+.main-games img {
+  width: 100%;
+  padding-left: 0 !important;
+  transition: all .2s;
+}
+
+.main-games h1 {
+  padding: 2vw 0;
+  font-size: 2vw;
+  /* transition: all .2s; */
+}
+
+@media screen and (max-width: 991px) {
+  .main-games {
+    height: 120vw;
+  }
+
+  .main-games-card {
+    width: 80%;
+    margin-top: 5vh;
+  }
+
+  .main-games-logo {
+    width: 20vw !important;
+  }
+
+  .main-games h1 {
+    padding-top: 4vw;
+    font-size: 4vw;
+  }
+
+  .main-games-card-desc {
+    font-size: 2vw !important;
+    width: 20vw;
+  }
+}
+
+.main-series {
+  width: 100%;
+  height: 30vw;
+  background-color: rgb(53, 0, 0);
+}
+
+.main-series-card {
+  position: relative;
+  outline: none;
+  border: none;
+  transition: all .2s ease-in-out;
+}
+
+.main-series-card:hover {
+  transform: scale(1.05);
+}
+
+.main-series-logo {
+  position: absolute;
+  top: 30%;
+  left: 1vw;
+  transform: translateY(-50%);
+  width: 12vw !important;
+}
+
+.main-series-card-desc {
+  position: absolute;
+  top: 80%;
+  left: 2vw;
+  transform: translateY(-50%);
+  width: 10vw;
+  font-size: 1vw !important;
+}
+
+.main-series img {
+  width: 100%;
+  padding-left: 0 !important;
+}
+
+.main-series h1 {
+  padding: 2vw 0;
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 991px) {
+  .main-series {
+    height: 90vw;
+  }
+
+  .main-series-card {
+    width: 80%;
+    margin-top: 5vh;
+  }
+
+  .main-series-logo {
+    width: 30vw !important;
+  }
+
+  .main-series h1 {
+    font-size: 4vw;
+  }
+
+  .main-series-card-desc {
+    font-size: 2vw !important;
+    width: 20vw;
+  }
+}
+
+.row {
+  justify-content: center;
+}
+
+.main-games .row>* {
+  padding: 0 !important;
+}
+
+.main-series .row>* {
+  padding: 0 !important;
+}
+
+.col-md-3 {
+  border: 1px solid white;
 }

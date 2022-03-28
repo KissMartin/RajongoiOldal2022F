@@ -9,16 +9,16 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="projektmunka.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <title>Kérdőív</title>
+    <title>Megjegyzés</title>
 </head>
 
 <body onload="updateComments()">
     <!--Navbar-->
     <nav class="navbar navbarBg navbar-dark navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="/pictures/riot icon.png" alt="Riot logo" id="riotLogo"><span id="logoName">Riot Games</span></a>
+            <a class="navbar-brand" href="/index.html"><img src="/pictures/riot icon.png" alt="Riot logo" id="riotLogo"><span id="logoName">Riot Games</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,7 +34,7 @@
                         <a class="nav-link navButtons navbarResponziv" href="arcane.html">Arcane</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navButtons navbarResponziv" aria-current="page" href="form.html">Kérdőív</a>
+                        <a class="nav-link navButtons navbarResponziv" aria-current="page" href="comment.html">Megjegyzés</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navButtons navbarResponziv" href="nevjegyek.html">Névjegyek</a>
@@ -53,7 +53,7 @@
             <a class="float-end form-counter text-white"><span id="current_count">0</span>/<span id="max_count">250</span></a><br>
             <div class="text-center">
                 <button id="send" class="btn btn-success mt-4">Küldés</button>
-                <button id="delete" class="btn btn-danger mt-4" style="margin-left: 1vw;">Törlés</button>
+                <button id="delete" class="btn btn-danger mt-4 marginLeft">Törlés</button>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@
 </body>
 
 <style>
-    #invisButton{
+    #invisButton {
         opacity: 0.004;
         padding: 10px 0;
     }
@@ -78,12 +78,12 @@
     var max_count_text = document.getElementById("max_count");
 
     var comments = document.getElementById("comments");
-    
+
     commentArea.addEventListener("input", event => { //Egy figyelő ami figyeli ha input történik a comment mezőben (írás, törlés)
         countText(event.currentTarget);
     });
 
-    function countText(textarea){ //Megszámolja hogy mennyi karakter van a comment mezőben
+    function countText(textarea) { //Megszámolja hogy mennyi karakter van a comment mezőben
         var maxcount = textarea.getAttribute("maxlength");
         var currentcount = textarea.value.length;
         current_count_text.innerHTML = currentcount;
@@ -99,7 +99,7 @@
             name: username.value,
             comment: commentArea.value
         };
-        
+
         var formedData = JSON.stringify(rawData); //Formázza az adatot hogy JSON legyen belőle
 
         $.ajax({ //AJAX request
@@ -107,65 +107,65 @@
             //url: '../php/writeComment.php',
             type: 'post', //A kérés módja (POST = rejtett, GET = látható)
             dataType: 'json', //A küldött adat formája json
-            data: {commentData: formedData}, //Az adat amit küldök commentData néven
-            success: function(response){ //Ha kapok választ ...
-                if(response == "empty"){
+            data: { commentData: formedData }, //Az adat amit küldök commentData néven
+            success: function (response) { //Ha kapok választ ...
+                if (response == "empty") {
                     error_comment.style.display = "inline";
                     error_comment.innerText = "Üres megjegyzés!";
                     return;
                 }
-                else if(response == "hiba"){
+                else if (response == "hiba") {
                     error_comment.style.display = "inline";
                     error_comment.innerText = "Hiba! Próbálja meg újra";
                     return;
                 }
-                else{ 
+                else {
                     clearForm();
                     updateComments();
                 }
             }
         });
-    }); 
+    });
 
-    function updateComments(){
+    function updateComments() {
         $.ajax({ //AJAX request
             url: 'https://darking.cf/ProjectMunka/readComment.php', //Az URL ahonnan kérem az adatot
             //url: '../php/readComment.php',
             type: 'post', //A kérés módja (POST = rejtett, GET = látható)
             dataType: 'json', //A küldött adat formája json
-            data: {commentData: ""}, //Az adat amit küldök commentData néven
-            success: function(response){ //Ha kapok választ ...
+            data: { commentData: "" }, //Az adat amit küldök commentData néven
+            success: function (response) { //Ha kapok választ ...
                 error_comment.style.display = "none";
-                if(response == false){
+                if (response == false) {
                     comments.innerHTML = ""; //Semmire állítja a commenteket
-                }else{
+                } else {
                     var text = response.replace(", ]", "]");
                     text = JSON.parse(text); //A szöveget JSON formátummá alakítja
 
                     comments.innerHTML = "";
-                    for(let i = 0; i < text.length; i++){
-                        comments.innerHTML += '<div class="border-white border border-1 p-4 mb-4 text-white"><h3>'+ text[i].name +'</h3><p>'+ text[i].comment +'</p></div>';
+                    for (let i = 0; i < text.length; i++) {
+                        comments.innerHTML += '<div class="border-white border border-1 p-4 mb-4 text-white"><h3>' + text[i].name + '</h3><p>' + text[i].comment + '</p></div>';
                     }
                 }
-                
+
             }
         });
     }
 
-    function clearForm(){
+    function clearForm() {
         username.value = "";
         commentArea.value = "";
         current_count_text.innerText = "0";
     }
 
     $('#invisButton').click(function (e) {
-        $.ajax({ 
-            url: 'https://darking.cf/ProjectMunka/deleteComment.php', 
-            type: 'post', 
+        $.ajax({
+            url: 'https://darking.cf/ProjectMunka/deleteComment.php',
+            type: 'post',
             dataType: 'json',
-            data: {commentData: ""},
-            success: function(response){
-                response = null; 
+            data: { commentData: "" },
+            success: function (response) {
+                response = null;
                 clearForm();
                 updateComments();
             }
