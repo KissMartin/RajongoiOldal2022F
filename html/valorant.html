@@ -95,12 +95,12 @@
 
         function SwitchDivs(div, btn){
             activeVideo.style.display = "none";
-            activeButton.classList.remove("abilityActive");
+            activeButton.childNodes[0].classList.remove("abilityActive");
 
             activeVideo = div;
             activeButton = btn;
             activeVideo.style.display = "block";
-            activeButton.classList.add("abilityActive");
+            activeButton.childNodes[0].classList.add("abilityActive");
         }
 
     </script>
