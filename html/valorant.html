@@ -12,11 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>Valorant</title>
-    <style>
-        body {
-            
-        }
-    </style>
 </head>
 
 <body>
@@ -48,15 +43,15 @@
             </div>
         </div>
     </nav>
-    <div class="veryTeszt container-fluid">
+    <div class="divSizing container-fluid">
         <div class="row">
             <div class="col-lg-5 col-8">
                 <h6 class="mb-5 mt-4">Képességek</h6>
-                <div class="asd2">
-                    <button class="asd5" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="verytest3 asd4 asd6"></button>
-                    <button class="asd5" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="verytest3 asd4"></button>
-                    <button class="asd5" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="verytest3 asd4"></button>
-                    <button class="asd5" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="verytest3 asd4"></button>
+                <div class="itemCentered">
+                    <button class="abilityButtons" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                    <button class="abilityButtons" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                    <button class="abilityButtons" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                    <button class="abilityButtons" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
                     <h4 class="mt-3">C - STIM BEACON</h4>
                     <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
                     <h4 style="display: none;">E - SKY SMOKE</h4>
@@ -68,7 +63,7 @@
                 </div>
             </div>
             <div class="col-7 m">
-                <video src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" loop autoplay class="videoprev" id="BrimC">
+                <video src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" loop autoplay class="videoprev" id="BrimC">
                     <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" type="video/mp4">
                 </video>
                 <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" loop autoplay class="videoprev" id="BrimE">
@@ -139,14 +134,14 @@
             background: url("/pictures/valorant_charatcers/letöltés.png");
             
         }
-        .asd2{
+        .itemCentered{
             padding-top: 10%;
             padding-left: 20%;
         }
         hr:not([size]) {
             height: 10px;
         }
-        .asd6{
+        .abilityActive{
             background-color: #ff4655;
             filter: brightness(1) !important;
             border: 1px solid white !important;    
@@ -158,17 +153,16 @@
             height: auto;
         }
 
-        .verytest3 {
+        .abilityIcons {
             width: 4vw;
             border: 1px solid #bdbcb7;
-            /* color: #0f1923; */
-            filter: brightness(0);
+            filter: brightness(1);
             margin-right: 0px;
             padding: 8px;
 
         }
 
-        .asd5 {
+        .abilityButtons {
             padding-top: 15px;
             all: unset;
             width: 4vw;
@@ -181,16 +175,12 @@
             padding-top: 2vw;
         }
 
-        .veryTeszt {
+        .divSizing {
             margin-left: 50px;
             box-sizing: border-box;
         }
 
-        .verytest2 {
-            display: inline;
-        }
-
-        .asd4:hover {
+        .abilityHover:hover {
             background-color: #ff4655;
             filter: brightness(1);
             border: 1px solid white;
