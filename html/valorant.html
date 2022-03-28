@@ -43,7 +43,7 @@
             </div>
         </div>
     </nav>
-    <div class="divSizing container-fluid">
+    <div class="container-fluid">
         <select name="dropdownMenu" id="AgentSelector" onchange="SwitchAgents()">
             <option value="brimstone">Brimstone</option>
             <option value="astra">Astra</option>
@@ -91,16 +91,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimC">
+                    <video src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BrimC">
                         <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BrimE">
                         <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BrimQ">
                         <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" class="Video videoprev" muted loop autoplay id="BrimX">
                         <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -116,34 +116,34 @@
                         <button class="abilityButtons" onclick="SwitchDivs(AstraQ, AstraQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
                         <button class="abilityButtons" onclick="SwitchDivs(AstraX, AstraXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
                         <div id="AstraCDesc" class="Description">
-                            <h4 class="mt-3">C - STIM BEACON</h4>
-                            <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                            <h4 class="mt-3">C - GRAVITY WELL</h4>
+                            <p>Place Stars in Astral Form (X) ACTIVATE a Star to form a Gravity Well. Players in the area are pulled toward the center before it explodes, making all players still trapped inside fragile.</p>
                         </div>
                         <div id="AstraEDesc" class="Description" style="display: none;">
-                            <h4 class="mt-3">E - SKY SMOKE</h4>
-                            <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                            <h4 class="mt-3">E - NEBULA</h4>
+                            <p>Place Stars in Astral Form (X) ACTIVATE a Star to transform it into a Nebula (smoke). Use (F) on a Star to Dissipate it, returning the star to be placed in a new location after a delay. Dissipate briefly forms a fake Nebula at the Star’s location before returning.</p>
                         </div>
                         <div id="AstraQDesc" class="Description" style="display: none;">
-                            <h4 class="mt-3">Q - INCENDIARY</h4>
-                            <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                            <h4 class="mt-3">Q - NOVA PULSE</h4>
+                            <p>Place Stars in Astral Form (X) ACTIVATE a Star to detonate a Nova Pulse. The Nova Pulse charges briefly then strikes, concussing all players in its area.</p>
                         </div>
                         <div id="AstraXDesc" class="Description" style="display: none;">
-                            <h4 class="mt-3">X - ORBITAL STRIKE</h4>
-                            <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                            <h4 class="mt-3">X - ASTRAL FORM / COSMIC DIVIDE</h4>
+                            <p>ACTIVATE (X) to enter Astral Form where you can place Stars with PRIMARY FIRE. Stars can be reactivated later, transforming them into a Nova Pulse, Nebula, or Gravity Well. When Cosmic Divide is charged, use SECONDARY FIRE in Astral Form to begin aiming it, then PRIMARY FIRE to select two locations. An infinite Cosmic Divide connects the two points you select. Cosmic Divide blocks bullets and heavily dampens audio.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_C.mp4" class="Video" muted loop autoplay class="videoprev" id="AstraC">
+                    <video src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_C.mp4" class="Video videoprev" muted loop autoplay id="AstraC">
                         <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_C.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" class="Video" muted loop autoplay class="videoprev" id="AstraE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" class="Video videoprev" muted loop autoplay id="AstraE">
                         <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_Q.mp4" class="Video" muted loop autoplay class="videoprev" id="AstraQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_Q.mp4" class="Video videoprev" muted loop autoplay id="AstraQ">
                         <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_Q.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_ULT.mp4" class="Video" muted loop autoplay class="videoprev" id="AstraX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_ULT.mp4" class="Video videoprev" muted loop autoplay id="AstraX">
                         <source src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_ULT.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -177,16 +177,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Breach/Breach_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BreachC">
+                    <video src="/pictures/valorant_charatcers/Breach/Breach_C_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="BreachC">
                         <source src="/pictures/valorant_charatcers/Breach/Breach_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BreachE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_E_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="BreachE">
                         <source src="/pictures/valorant_charatcers/Breach/Breach_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BreachQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="BreachQ">
                         <source src="/pictures/valorant_charatcers/Breach/Breach_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BreachX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Breach/Breach_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="BreachX">
                         <source src="/pictures/valorant_charatcers/Breach/Breach_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -220,16 +220,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_C.mp4" class="Video" muted loop autoplay class="videoprev" id="ChamberC">
+                    <video src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_C.mp4" class="Video videoprev" muted loop autoplay  id="ChamberC">
                         <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_C.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_E.mp4" class="Video" muted loop autoplay class="videoprev" id="ChamberE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_E.mp4" class="Video videoprev" muted loop autoplay  id="ChamberE">
                         <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_E.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_Q.mp4" class="Video" muted loop autoplay class="videoprev" id="ChamberQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_Q.mp4" class="Video videoprev" muted loop autoplay  id="ChamberQ">
                         <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_Q.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_X.mp4" class="Video" muted loop autoplay class="videoprev" id="ChamberX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_X.mp4" class="Video videoprev" muted loop autoplay  id="ChamberX">
                         <source src="/pictures/valorant_charatcers/Chamber/VAL_broll_EP03-3_Chamber_X.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -263,16 +263,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Cypher/Cypher_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="CypherC">
+                    <video src="/pictures/valorant_charatcers/Cypher/Cypher_C_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="CypherC">
                         <source src="/pictures/valorant_charatcers/Cypher/Cypher_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="CypherE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_E_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="CypherE">
                         <source src="/pictures/valorant_charatcers/Cypher/Cypher_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="CypherQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="CypherQ">
                         <source src="/pictures/valorant_charatcers/Cypher/Cypher_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="CypherX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Cypher/Cypher_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="CypherX">
                         <source src="/pictures/valorant_charatcers/Cypher/Cypher_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -306,16 +306,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Jett/Jett_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="JettC">
+                    <video src="/pictures/valorant_charatcers/Jett/Jett_C_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="JettC">
                         <source src="/pictures/valorant_charatcers/Jett/Jett_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="JettE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_E_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="JettE">
                         <source src="/pictures/valorant_charatcers/Jett/Jett_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="JettQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="JettQ">
                         <source src="/pictures/valorant_charatcers/Jett/Jett_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="JettX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Jett/Jett_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="JettX">
                         <source src="/pictures/valorant_charatcers/Jett/Jett_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -349,16 +349,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Kayo/KAYO_C_v002_web.mp4" class="Video" muted loop autoplay class="videoprev" id="KayoC">
+                    <video src="/pictures/valorant_charatcers/Kayo/KAYO_C_v002_web.mp4" class="Video videoprev" muted loop autoplay  id="KayoC">
                         <source src="/pictures/valorant_charatcers/Kayo/KAYO_C_v002_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_E_v002_web.mp4" class="Video" muted loop autoplay class="videoprev" id="KayoE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_E_v002_web.mp4" class="Video videoprev" muted loop autoplay  id="KayoE">
                         <source src="/pictures/valorant_charatcers/Kayo/KAYO_E_v002_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="KayoQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="KayoQ">
                         <source src="/pictures/valorant_charatcers/Kayo/KAYO_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_X_v003_web.mp4" class="Video" muted loop autoplay class="videoprev" id="KayoX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Kayo/KAYO_X_v003_web.mp4" class="Video videoprev" muted loop autoplay  id="KayoX">
                         <source src="/pictures/valorant_charatcers/Kayo/KAYO_X_v003_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -392,16 +392,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Killjoy/Grenade_LowQuality.mp4" class="Video" muted loop autoplay class="videoprev" id="KilljoyC">
+                    <video src="/pictures/valorant_charatcers/Killjoy/Grenade_LowQuality.mp4" class="Video videoprev" muted loop autoplay  id="KilljoyC">
                         <source src="/pictures/valorant_charatcers/Killjoy/Grenade_LowQuality.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/Turret_LowQuality.mp4" class="Video" muted loop autoplay class="videoprev" id="KilljoyE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/Turret_LowQuality.mp4" class="Video videoprev" muted loop autoplay  id="KilljoyE">
                         <source src="/pictures/valorant_charatcers/Killjoy/Turret_LowQuality.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/AlarmBot_LowQuality.mp4" class="Video" muted loop autoplay class="videoprev" id="KilljoyQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/AlarmBot_LowQuality.mp4" class="Video videoprev" muted loop autoplay  id="KilljoyQ">
                         <source src="/pictures/valorant_charatcers/Killjoy/AlarmBot_LowQuality.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/Ultimate_LowQualityV02.mp4" class="Video" muted loop autoplay class="videoprev" id="KilljoyX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Killjoy/Ultimate_LowQualityV02.mp4" class="Video videoprev" muted loop autoplay  id="KilljoyX">
                         <source src="/pictures/valorant_charatcers/Killjoy/Ultimate_LowQuality.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -435,16 +435,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-C_Preview_Walls_noHUD_Web_h264.mp4" class="Video" muted loop autoplay class="videoprev" id="NeonC">
+                    <video src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-C_Preview_Walls_noHUD_Web_h264.mp4" class="Video videoprev" muted loop autoplay  id="NeonC">
                         <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-C_Preview_Walls_noHUD_Web_h264.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-E_Preview_Sprint_noHUD_Web_h264.mp4" class="Video" muted loop autoplay class="videoprev" id="NeonE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-E_Preview_Sprint_noHUD_Web_h264.mp4" class="Video videoprev" muted loop autoplay  id="NeonE">
                         <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-E_Preview_Sprint_noHUD_Web_h264.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-Q_Preview_Stun_noHUD_Web_h264.mp4" class="Video" muted loop autoplay class="videoprev" id="NeonQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-Q_Preview_Stun_noHUD_Web_h264.mp4" class="Video videoprev" muted loop autoplay  id="NeonQ">
                         <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-Q_Preview_Stun_noHUD_Web_h264.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-X_Preview_Ult_noHUD_Web_h264.mp4" class="Video" muted loop autoplay class="videoprev" id="NeonX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-X_Preview_Ult_noHUD_Web_h264.mp4" class="Video videoprev" muted loop autoplay  id="NeonX">
                         <source src="/pictures/valorant_charatcers/Neon/VAL_Neon_Ability-X_Preview_Ult_noHUD_Web_h264.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -478,16 +478,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Omen/Omen_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="OmenC">
+                    <video src="/pictures/valorant_charatcers/Omen/Omen_C_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="OmenC">
                         <source src="/pictures/valorant_charatcers/Omen/Omen_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="OmenE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_E_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="OmenE">
                         <source src="/pictures/valorant_charatcers/Omen/Omen_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="OmenQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="OmenQ">
                         <source src="/pictures/valorant_charatcers/Omen/Omen_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="OmenX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Omen/Omen_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="OmenX">
                         <source src="/pictures/valorant_charatcers/Omen/Omen_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -521,16 +521,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Phoenix/Phoenix_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="PhoenixC">
+                    <video src="/pictures/valorant_charatcers/Phoenix/Phoenix_C_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="PhoenixC">
                         <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="PhoenixE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_E_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="PhoenixE">
                         <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="PhoenixQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="PhoenixQ">
                         <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="PhoenixX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Phoenix/Phoenix_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="PhoenixX">
                         <source src="/pictures/valorant_charatcers/Phoenix/Phoenix_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -564,16 +564,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Raze/Raze_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="RazeC">
+                    <video src="/pictures/valorant_charatcers/Raze/Raze_C_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="RazeC">
                         <source src="/pictures/valorant_charatcers/Raze/Raze_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="RazeE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_E_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="RazeE">
                         <source src="/pictures/valorant_charatcers/Raze/Raze_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="RazeQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="RazeQ">
                         <source src="/pictures/valorant_charatcers/Raze/Raze_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="RazeX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Raze/Raze_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="RazeX">
                         <source src="/pictures/valorant_charatcers/Raze/Raze_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -607,16 +607,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Reyna/Reyna_C_v002_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ReynaC">
+                    <video src="/pictures/valorant_charatcers/Reyna/Reyna_C_v002_web.mp4" class="Video videoprev" muted loop autoplay  id="ReynaC">
                         <source src="/pictures/valorant_charatcers/Reyna/Reyna_C_v002_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_E_v002_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ReynaE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_E_v002_web.mp4" class="Video videoprev" muted loop autoplay  id="ReynaE">
                         <source src="/pictures/valorant_charatcers/Reyna/Reyna_E_v002_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ReynaQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="ReynaQ">
                         <source src="/pictures/valorant_charatcers/Reyna/Reyna_Q_v002_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ReynaX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Reyna/Reyna_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="ReynaX">
                         <source src="/pictures/valorant_charatcers/Reyna/Reyna_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -650,16 +650,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Sage/Sage_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="BrimC">
+                    <video src="/pictures/valorant_charatcers/Sage/Sage_C_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="BrimC">
                         <source src="/pictures/valorant_charatcers/Sage/Sage_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="SageE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_E_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="SageE">
                         <source src="/pictures/valorant_charatcers/Sage/Sage_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="SageQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="SageQ">
                         <source src="/pictures/valorant_charatcers/Sage/Sage_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="SageX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Sage/Sage_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="SageX">
                         <source src="/pictures/valorant_charatcers/Sage/Sage_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -693,16 +693,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Skye/Val_Skye_C_Ability_Web.mp4" class="Video" muted loop autoplay class="videoprev" id="SkyeC">
+                    <video src="/pictures/valorant_charatcers/Skye/Val_Skye_C_Ability_Web.mp4" class="Video videoprev" muted loop autoplay  id="SkyeC">
                         <source src="/pictures/valorant_charatcers/Skye/Val_Skye_C_Ability_Web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_E_Ability_Web.mp4" class="Video" muted loop autoplay class="videoprev" id="SkyeE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_E_Ability_Web.mp4" class="Video videoprev" muted loop autoplay  id="SkyeE">
                         <source src="/pictures/valorant_charatcers/Skye/Val_Skye_E_Ability_Web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_Q_Ability_Web.mp4" class="Video" muted loop autoplay class="videoprev" id="SkyeQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_Q_Ability_Web.mp4" class="Video videoprev" muted loop autoplay  id="SkyeQ">
                         <source src="/pictures/valorant_charatcers/Skye/Val_Skye_Q_Ability_Web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_X_Ability_Web.mp4" class="Video" muted loop autoplay class="videoprev" id="SkyeX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Skye/Val_Skye_X_Ability_Web.mp4" class="Video videoprev" muted loop autoplay  id="SkyeX">
                         <source src="/pictures/valorant_charatcers/Skye/Val_Skye_X_Ability_Web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -736,16 +736,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Viper/Viper_C_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ViperC">
+                    <video src="/pictures/valorant_charatcers/Viper/Viper_C_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="ViperC">
                         <source src="/pictures/valorant_charatcers/Viper/Viper_C_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_E_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ViperE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_E_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="ViperE">
                         <source src="/pictures/valorant_charatcers/Viper/Viper_E_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_Q_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ViperQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_Q_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="ViperQ">
                         <source src="/pictures/valorant_charatcers/Viper/Viper_Q_v001_web.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_X_v001_web.mp4" class="Video" muted loop autoplay class="videoprev" id="ViperX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Viper/Viper_X_v001_web.mp4" class="Video videoprev" muted loop autoplay  id="ViperX">
                         <source src="/pictures/valorant_charatcers/Viper/Viper_X_v001_web.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -779,16 +779,16 @@
                     </div>
                 </div>
                 <div class="col-7 m">
-                    <video src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Fakeout_v2.mp4" class="Video" muted loop autoplay class="videoprev" id="YoruC">
+                    <video src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Fakeout_v2.mp4" class="Video videoprev" muted loop autoplay  id="YoruC">
                         <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Fakeout_v2.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Yoru_Abilities_Blinding_1_1.mp4" class="Video" muted loop autoplay class="videoprev" id="YoruE">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Yoru_Abilities_Blinding_1_1.mp4" class="Video videoprev" muted loop autoplay  id="YoruE">
                         <source src="/pictures/valorant_charatcers/Yoru/Yoru_Abilities_Blinding_1_1.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Gatecrash_v2.mp4" class="Video" muted loop autoplay class="videoprev" id="YoruQ">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Gatecrash_v2.mp4" class="Video videoprev" muted loop autoplay  id="YoruQ">
                         <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Gatecrash_v2.mp4" type="video/mp4">
                     </video>
-                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" class="Video" muted loop autoplay class="videoprev" id="YoruX">
+                    <video style="display: none;" src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" class="Video videoprev" muted loop autoplay  id="YoruX">
                         <source src="/pictures/valorant_charatcers/Yoru/Website_Yoru_Rework_Dimensional_Drift_v2.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -1008,11 +1008,6 @@
             color: #0f1923;
             margin: 0 0 0 10vw;
             padding-top: 2vw;
-        }
-
-        .divSizing {
-            margin-left: 50px;
-            box-sizing: border-box;
         }
 
         .abilityHover:hover {
