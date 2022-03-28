@@ -48,18 +48,26 @@
             <div class="col-lg-5 col-8">
                 <h6 class="mb-5 mt-4">Képességek</h6>
                 <div class="itemCentered">
-                    <button class="abilityButtons" onclick="SwitchDivs(BrimC, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
-                    <button class="abilityButtons" onclick="SwitchDivs(BrimE, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
-                    <button class="abilityButtons" onclick="SwitchDivs(BrimQ, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
-                    <button class="abilityButtons" onclick="SwitchDivs(BrimX, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
-                    <h4 class="mt-3">C - STIM BEACON</h4>
-                    <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
-                    <h4 style="display: none;">E - SKY SMOKE</h4>
-                    <p style="display: none;">EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
-                    <h4 style="display: none;">Q - INCENDIARY</h4>
-                    <p style="display: none;">EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
-                    <h4 style="display: none;">X - ORBITAL STRIKE</h4>
-                    <p style="display: none;">EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                    <button class="abilityButtons" onclick="SwitchDivs(BrimC, BrimCDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                    <button class="abilityButtons" onclick="SwitchDivs(BrimE, BrimEDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                    <button class="abilityButtons" onclick="SwitchDivs(BrimQ, BrimQDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                    <button class="abilityButtons" onclick="SwitchDivs(BrimX, BrimXDesc, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                    <div id="BrimCDesc">
+                        <h4 class="mt-3">C - STIM BEACON</h4>
+                        <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+                    </div>
+                    <div id="BrimEDesc" style="display: none;">
+                        <h4 class="mt-3">E - SKY SMOKE</h4>
+                        <p>EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+                    </div>
+                    <div id="BrimQDesc" style="display: none;">
+                        <h4 class="mt-3">Q - INCENDIARY</h4>
+                        <p>EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+                    </div>
+                    <div id="BrimXDesc" style="display: none;">
+                        <h4 class="mt-3">X - ORBITAL STRIKE</h4>
+                        <p>EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-7 m">
@@ -81,24 +89,35 @@
     <script>
         var activeVideo;
         var activeButton;
+        var activeDesc;
         
         //Brimstone Ability Videos
         var BrimC = document.getElementById("BrimC");
         var BrimE = document.getElementById("BrimE");
         var BrimQ = document.getElementById("BrimQ");
         var BrimX = document.getElementById("BrimX");
+        //Brimstone Ability Desctiptions
+        var BrimCDesc = document.getElementById("BrimCDesc");
+        var BrimEDesc = document.getElementById("BrimEDesc");
+        var BrimQDesc = document.getElementById("BrimQDesc");
+        var BrimXDesc = document.getElementById("BrimXDesc");
 
         function setDef() {
+            activeDesc = BrimCDesc;
             activeVideo = BrimC;
             activeButton = document.getElementsByClassName("abilityButtons")[0];
         }
 
-        function SwitchDivs(div, btn){
+        function SwitchDivs(div, desc, btn){
             activeVideo.style.display = "none";
             activeButton.childNodes[0].classList.remove("abilityActive");
+            activeDesc.style.display = "none";
 
             activeVideo = div;
             activeButton = btn;
+            activeDesc = desc;
+
+            activeDesc.style.display = "block";
             activeVideo.style.display = "block";
             activeButton.childNodes[0].classList.add("abilityActive");
         }
