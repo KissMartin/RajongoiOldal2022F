@@ -14,7 +14,7 @@
     <title>Valorant</title>
 </head>
 
-<body>
+<body onload="setDef()">
     <!--Navbar-->
     <nav class="navbar navbarBg navbar-dark navbar-expand-lg">
         <div class="container-fluid">
@@ -48,10 +48,10 @@
             <div class="col-lg-5 col-8">
                 <h6 class="mb-5 mt-4">Képességek</h6>
                 <div class="itemCentered">
-                    <button class="abilityButtons" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
-                    <button class="abilityButtons" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
-                    <button class="abilityButtons" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
-                    <button class="abilityButtons" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
+                    <button class="abilityButtons" onclick="SwitchDivs(BrimC, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_C.png" alt="" class="abilityIcons abilityHover abilityActive"></button>
+                    <button class="abilityButtons" onclick="SwitchDivs(BrimE, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_E.png" alt="" class="abilityIcons abilityHover"></button>
+                    <button class="abilityButtons" onclick="SwitchDivs(BrimQ, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_Q.png" alt="" class="abilityIcons abilityHover"></button>
+                    <button class="abilityButtons" onclick="SwitchDivs(BrimX, this)" type="button" title="ability"><img src="/pictures/valorant_charatcers/Brimstone/TX_Brimstone_X.png" alt="" class="abilityIcons abilityHover"></button>
                     <h4 class="mt-3">C - STIM BEACON</h4>
                     <p>EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
                     <h4 style="display: none;">E - SKY SMOKE</h4>
@@ -63,22 +63,48 @@
                 </div>
             </div>
             <div class="col-7 m">
-                <video src="/pictures/valorant_charatcers/Astra/RIFT21_Astra_Ability_E_F.mp4" loop autoplay class="videoprev" id="BrimC">
+                <video src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" muted loop autoplay class="videoprev" id="BrimC">
                     <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_C_v001_web.mp4" type="video/mp4">
                 </video>
-                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" loop autoplay class="videoprev" id="BrimE">
+                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" muted loop autoplay class="videoprev" id="BrimE">
                     <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_E_v001_web.mp4" type="video/mp4">
                 </video>
-                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" loop autoplay class="videoprev" id="BrimQ">
+                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" muted loop autoplay class="videoprev" id="BrimQ">
                     <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_Q_v001_web.mp4" type="video/mp4">
                 </video>
-                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" loop autoplay class="videoprev" id="BrimX">
+                <video style="display: none;" src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" muted loop autoplay class="videoprev" id="BrimX">
                     <source src="/pictures/valorant_charatcers/Brimstone/Brimstone_X_v001_web.mp4" type="video/mp4">
                 </video>
             </div>
-
         </div>
     </div>
+    <script>
+        var activeVideo;
+        var activeButton;
+        
+        //Brimstone Ability Videos
+        var BrimC = document.getElementById("BrimC");
+        var BrimE = document.getElementById("BrimE");
+        var BrimQ = document.getElementById("BrimQ");
+        var BrimX = document.getElementById("BrimX");
+
+        function setDef() {
+            activeVideo = BrimC;
+            activeButton = document.getElementsByClassName("abilityButtons")[0];
+        }
+
+        function SwitchDivs(div, btn){
+            activeVideo.style.display = "none";
+            activeButton.classList.remove("abilityActive");
+
+            activeVideo = div;
+            activeButton = btn;
+            activeVideo.style.display = "block";
+            activeButton.classList.add("abilityActive");
+        }
+
+    </script>
+    <!--SlideShow-->
     <div class="slideShowBgColor backgroundImage mt-5" >
         <hr style="background-color:#bdbcb7;">
         <h1 class="slideShowText">Mapok</h1>
