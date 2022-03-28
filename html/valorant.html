@@ -47,16 +47,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="arcaneBgShadow col-6">
-                    <img src="/pictures/" alt="lol-header" class="pictureResize">
+                    
                 </div>
                 <div class="col-6">
                 </div>
             </div>
         </div>
-        <img src="/pictures/valorant_header.png" alt="Lol-logo" class="header">
+        <img src="/pictures/valorant_header.png" alt="Lol-logo" class="Arcane_img">
     </div>
     <div class="container-fluid">
-        <h1>Characters</h1>
+        <h1 class="pt-4">Characters</h1>
         <select name="dropdownMenu" id="AgentSelector" onchange="SwitchAgents()">
             <option value="brimstone">Brimstone</option>
             <option value="astra">Astra</option>
@@ -1035,7 +1035,7 @@
         @media screen and (max-width: 1200px) {
             .itemCenteredValo{
                 padding-left: 20%;
-                padding-top: 10%;
+                padding-top: 5%;
             }
             .abilityIcons{
                 width: 10vw;
@@ -1059,6 +1059,21 @@
         .contentJustify{
             text-align: justify;
             margin-right: 20%;
+        }
+        @media screen and (max-width: 1000px) {
+        .pictureFormat{
+            width: 45vw !important;
+
+        }
+        
+        }
+        @media screen and (max-width: 768px) {
+        .pictureFormat{
+            width: 70vw !important;
+            margin-left: 10vw;
+
+        }
+        
         }
     </style>
 </body>
