@@ -279,7 +279,6 @@ body {
 
 .main-text {
   width: 100%;
-  height: 50vh;
 }
 
 .main-text h1 {
@@ -313,9 +312,6 @@ body {
     font-size: 2vw;
   }
 
-  .main-text {
-    height: 120vw;
-  }
 }
 @media screen and (max-width: 660px) {
   .main-welcome {
@@ -335,9 +331,6 @@ body {
     font-size: 3vw;
   }
 
-  .main-text {
-    height: 120vw;
-  }
 }
 
 .main-games {
@@ -588,7 +581,25 @@ hr:not([size]) {
     width: 5vw;
   }
 }
+@media screen and (max-width: 540px) {
+  .abilityIcons {
+    width: 12vw;
+  }
 
+  .abilityButtons {
+    width: 12vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .abilityIcons {
+    width: 14vw;
+  }
+
+  .abilityButtons {
+    margin-right: 10px;
+    width: 14vw;
+  }
+}
 .contentJustify {
   text-align: justify;
   margin-right: 20%;
