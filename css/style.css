@@ -588,7 +588,25 @@ hr:not([size]) {
     width: 5vw;
   }
 }
+@media screen and (max-width: 540px) {
+  .abilityIcons {
+    width: 12vw;
+  }
 
+  .abilityButtons {
+    width: 12vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .abilityIcons {
+    width: 14vw;
+  }
+
+  .abilityButtons {
+    margin-right: 10px;
+    width: 14vw;
+  }
+}
 .contentJustify {
   text-align: justify;
   margin-right: 20%;
