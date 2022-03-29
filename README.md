@@ -1,4 +1,14 @@
-# Rajongói oldal
+# Riot Games Rajongói oldal
 
 ## Röviden
- Az oldal 4 fő html-ből fog állni. Lesz egy maga a Riot gamesről, a Valorantról, League of Legendsről és az Arcaneről. Összességében mindegyik oldalt egy rövid ismertetőt szeretnénk csinálni, ami reméljük meghozza a különbőző játékokhoz/sorozathoz az ön kedvét. 
+    Ez a weboldal egy Riot Games rajongói oldal. A Riot Games egy játékfejlessztő cég, amely nagy sikereket ért el 2021-ben
+    6 része van a weboldalnak:
+    - Az főoldal (index.html)
+    - A League of Legends (lol.html)
+    - A Valorant (valorant.html)
+    - Megjegyzések (commanet.html)
+    - Névjegyek (nevjegyek.html)
+
+    Készítők:
+    - Kiss Martin (kiss.martin@students.jedlik.eu)
+    - Gehér Marcell (geher.marcell@students.jedlik.eu)
