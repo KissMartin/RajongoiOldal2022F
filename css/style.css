@@ -279,7 +279,6 @@ body {
 
 .main-text {
   width: 100%;
-  height: 50vh;
 }
 
 .main-text h1 {
@@ -313,9 +312,6 @@ body {
     font-size: 2vw;
   }
 
-  .main-text {
-    height: 120vw;
-  }
 }
 @media screen and (max-width: 660px) {
   .main-welcome {
@@ -335,9 +331,6 @@ body {
     font-size: 3vw;
   }
 
-  .main-text {
-    height: 120vw;
-  }
 }
 
 .main-games {
