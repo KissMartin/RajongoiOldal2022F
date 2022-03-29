@@ -4,7 +4,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: "Mark Pro", Arial, sans-serif;
   background-color: #1f1f1f;
@@ -240,7 +239,7 @@ a[target="_blank"]:hover {
 .marginLeft {
   margin-left: 1vw;
 }
-.buttonVisit{
+.buttonVisit {
   text-decoration: none;
   font-size: 1.2em;
   padding: 10px 20px;
@@ -255,7 +254,7 @@ a[target="_blank"]:hover {
   transition: 0.25s all ease;
   margin-bottom: 50px;
 }
-.buttonVisit:hover{
+.buttonVisit:hover {
   color: inherit;
   background-color: #5032d5 !important;
   box-shadow: 0 10px 45px -10px rgb(111 111 255 / 15%),
@@ -345,7 +344,7 @@ body {
   width: 100%;
   height: 30vw;
   background-color: rgb(0, 0, 49);
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .main-games-card {
@@ -353,7 +352,7 @@ body {
   outline: none;
   border: none;
   margin: 0 20px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .main-games-card:hover {
@@ -366,7 +365,7 @@ body {
   left: 3vw;
   transform: translateY(-50%);
   width: 8vw !important;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .main-games-card-desc {
@@ -376,13 +375,13 @@ body {
   transform: translateY(-50%);
   width: 10vw;
   font-size: 0.8vw !important;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .main-games img {
   width: 100%;
   padding-left: 0 !important;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .main-games h1 {
@@ -426,7 +425,7 @@ body {
   position: relative;
   outline: none;
   border: none;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .main-series-card:hover {
@@ -488,14 +487,145 @@ body {
   justify-content: center;
 }
 
-.main-games .row>* {
+.main-games .row > * {
   padding: 0 !important;
 }
 
-.main-series .row>* {
+.main-series .row > * {
   padding: 0 !important;
 }
 
 .col-md-3 {
   border: 1px solid white;
+}
+@media screen and (max-width: 1050px) {
+}
+
+.backgroundImage {
+  background-color: #bdbcb7 !important;
+  background: url("/pictures/valorant_charatcers/letöltés.png");
+}
+
+.itemCentered {
+  padding-top: 10%;
+  padding-left: 20%;
+}
+
+hr:not([size]) {
+  height: 10px;
+}
+
+.abilityActive {
+  background-color: #ff4655;
+  filter: brightness(1) !important;
+  border: 1px solid white !important;
+}
+
+.videoprev {
+  vertical-align: middle;
+  padding-top: 3.5vw;
+  max-width: 80%;
+  height: auto;
+}
+
+.abilityIcons {
+  width: 4vw;
+  border: 1px solid #bdbcb7;
+  filter: brightness(1);
+  margin-right: 0px;
+  padding: 8px;
+}
+
+.abilityButtons {
+  padding-top: 15px;
+  all: unset;
+  width: 4vw;
+  margin-right: 20px;
+}
+
+.slideShowText {
+  color: #0f1923;
+  margin: 0 0 0 10vw;
+  padding-top: 2vw;
+}
+
+.abilityHover:hover {
+  background-color: #ff4655;
+  filter: brightness(1);
+  border: 1px solid white;
+}
+
+.itemCenteredValo {
+  padding-left: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+  .itemCenteredValo {
+    padding-left: 20%;
+    padding-top: 5%;
+  }
+
+  .abilityIcons {
+    width: 10vw;
+  }
+
+  .abilityButtons {
+    width: 10vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .itemCenteredValo {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .abilityIcons {
+    width: 5vw;
+  }
+
+  .abilityButtons {
+    width: 5vw;
+  }
+}
+
+.contentJustify {
+  text-align: justify;
+  margin-right: 20%;
+}
+
+@media screen and (max-width: 1000px) {
+  .pictureFormat {
+    width: 45vw !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pictureFormat {
+    width: 70vw !important;
+    margin-left: 10vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .pictureFormat{
+      width: 45vw !important;
+
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .pictureFormat{
+      width: 70vw !important;
+      margin-left: 10vw;
+
+  }
+  
+}
+.pictureFormat{
+  width: 80%;
+  padding-top: 3vw;
+}
+.contentFormat{
+  padding-top: 1.5vw;
+  padding-right: 10vw;
 }
