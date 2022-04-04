@@ -12,3 +12,6 @@
     Készítők:
     - Kiss Martin (kiss.martin@students.jedlik.eu)
     - Gehér Marcell (geher.marcell@students.jedlik.eu)
+    
+## Githubon hostolt oldal
+    https://kissmartin.github.io/RajongoiOldal2022F
