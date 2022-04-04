@@ -106,8 +106,13 @@ body {
   }
 }
 
-.pictureResize {
+.ArcanepictureResize {
   padding: 16vw 0 0 50px;
+  width: 400px;
+  display: block;
+}
+.ValopictureResize {
+  padding: 11vw 0 0 50px;
   width: 400px;
   display: block;
 }
@@ -180,7 +185,7 @@ td {
     max-width: 600px;
     width: 100%;
   }
-  .pictureResize {
+  .ArcanepictureResize {
     width: 200px;
   }
   .tableResize {
