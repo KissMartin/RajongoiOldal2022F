@@ -226,21 +226,6 @@ td {
     0 0 20px -10px rgb(111 111 255 / 35%),
     0 10px 30px -10px rgb(111 111 255 / 25%) !important;
 }
-a[target="_blank"] {
-  text-decoration: none;
-  color: inherit;
-  padding: 6px 0;
-  display: inline-block;
-  transition: 0.2s color;
-}
-a[target="_blank"]:hover {
-  background: linear-gradient(315deg, #6757d3 0%, #f53844 100%);
-  background-clip: unset;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
 .marginLeft {
   margin-left: 1vw;
 }
@@ -644,4 +629,19 @@ hr:not([size]) {
 .contentFormat{
   padding-top: 1.5vw;
   padding-right: 10vw;
+}
+.nevjegyLink{
+  text-decoration: none;
+  color: inherit;
+  padding: 6px 0;
+  display: inline-block;
+  transition: 0.2s color;
+}
+.nevjegyLink:hover{
+  background: linear-gradient(315deg, #6757d3 0%, #f53844 100%);
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
