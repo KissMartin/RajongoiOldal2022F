@@ -645,9 +645,3 @@ hr:not([size]) {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
-.skyeAbilities{
-  height: 5.926vw;
-  width: 5.926vw;
-  background-color: #f9f9f9;
-
-}
