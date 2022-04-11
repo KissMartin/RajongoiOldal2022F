@@ -1,18 +1,26 @@
 [
     {
       "_id": 1,
-      "jatekNeve": "Valorant"
+      "game": "Valorant",
+      "releaseDate": "2020-06-2",
+      "isFree": true
     },
     {
       "_id": 2,
-      "jatekNeve": "League of Legends"
+      "game": "League of Legends",
+      "releaseDate": "2009-09-27",
+      "isFree": true
     },
     {
       "_id": 3,
-      "jatekNeve": "Arcane"
+      "game": "Arcane",
+      "releaseDate": "2021-11-06",
+      "isFree": false
     },
     {
       "_id": 4,
-      "jatekNeve": "TFT"
+      "game": "TFT: Teamfight Tactics",
+      "releaseDate": "2019-06-26",
+      "isFree": true
     }
   ]
