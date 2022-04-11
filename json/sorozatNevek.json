@@ -7,7 +7,7 @@
       "időtartamSec": 2580,
       "szerző": "Christian Linke",
       "deliveryDate": "2021-11-6",
-      "pictureUrl": ""
+      "pictureUrl": "https://imgur.com/lfeOEf0"
     },
     {
       "_id": 2,
@@ -17,7 +17,7 @@
       "időtartamSec": 2460,
       "szerző": "Nick Luddington",
       "deliveryDate": "2021-11-6",
-      "pictureUrl": "http://elit.jedlik.eu/nits/bridges/02.jpg"
+      "pictureUrl": "https://imgur.com/BaLvyoi"
     },
     {
       "_id": 3,
@@ -27,7 +27,7 @@
       "időtartamSec": 2640,
       "szerző": "Ash Brannon",
       "deliveryDate": "2021-11-6",
-      "pictureUrl": "http://elit.jedlik.eu/nits/bridges/09.jpg"
+      "pictureUrl": "https://imgur.com/auRMKOU"
     },
     {
       "_id": 4,
@@ -37,7 +37,7 @@
       "időtartamSec": 2460,
       "szerző": "David Dunne",
       "deliveryDate": "2021-11-13",
-      "pictureUrl": "http://elit.jedlik.eu/nits/bridges/03.jpg"
+      "pictureUrl": "https://imgur.com/MxjaqDS"
     },
     {
       "_id": 5,
@@ -47,7 +47,7 @@
       "időtartamSec": 2460,
       "szerző": "Amanda Overton",
       "deliveryDate": "2021-11-13",
-      "pictureUrl": "http://elit.jedlik.eu/nits/bridges/04.jpg"
+      "pictureUrl": "https://imgur.com/GSA0EfK"
     },
     {
       "_id": 6,
@@ -57,7 +57,7 @@
       "időtartamSec": 2520,
       "szerző": "Alex Yee",
       "deliveryDate": "2021-11-13",
-      "pictureUrl": "http://elit.jedlik.eu/nits/bridges/05.jpg"
+      "pictureUrl": "https://imgur.com/M1SmqCE"
     },
     {
       "_id": 7,
@@ -67,7 +67,7 @@
       "időtartamSec": 2400,
       "szerző": "Nick Luddington",
       "deliveryDate": "2021-11-20",
-      "pictureUrl": "http://elit.jedlik.eu/nits/bridges/06.jpg"
+      "pictureUrl": "https://imgur.com/6QBKr51"
     },
     {
       "_id": 8,
@@ -77,7 +77,7 @@
       "időtartamSec": 2400,
       "szerző": "Ben St. John és Mollie St. John",
       "deliveryDate": "2021-11-20",
-      "pictureUrl": "http://elit.jedlik.eu/nits/bridges/07.jpg"
+      "pictureUrl": "https://imgur.com/oZfrCZl"
     },
     {
       "_id": 9,
@@ -87,6 +87,6 @@
       "időtartamSec": 2340,
       "szerző": "Christian Linke és Alex Yee",
       "deliveryDate": "2021-11-20",
-      "pictureUrl": "http://elit.jedlik.eu/nits/bridges/08.jpg"
+      "pictureUrl": "https://imgur.com/4Grf2m4"
     }
   ]
