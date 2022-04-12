@@ -4,7 +4,7 @@
       "episodeName": "Üdv a játszótéren",
       "description": "Zaun elnyomott alvárosának lázadói átvonulnak egy hídon Piltoverbe, aminek eredményeként a Piltover végrehajtói brutális visszaszorítást kapnak. Az ezt követő erőszakos cselekmények során Powder és Vi nővérek szüleiket holtan találják a romok között, és a kudarcba fulladt lázadás vezetője, Vander saját gyermekei közé veszi őket. Évekkel később Vi és Powder kirabolnak egy Piltovan penthouse-t fogadott testvéreikkel, Myloval és Claggorral, miután borravalót kaptak barátjuktól, Ekkotól. A por ellop egy sor mágikus kristályt, és véletlenül összetör egyet, amikor a penthouse tulajdonosa visszatér. A létrejövő robbanás az épület nagy részét tönkreteszi, és figyelmezteti a végrehajtókat a jelenlétükre, akiket kis híján megszöknek. Visszatérve az alvárosba, a testvérek találkoznak Deckarddal és gengsztereivel; miközben ökölharcban verik őket, Powdert üldözik, és elveszti a zsákmányt. Vander, most egy csapos és egy de facto közösségi vezető az alvárosban, szidja a gyerekeket gondatlanságukért, és megpróbálja elsimítani a dolgokat Graysonnal, a végrehajtók seriffjével. Vi becézi Mylot, amiért Powdert csillagnak nevezte, és megnyugtatja a húgát, hogy a helyzet jobb lesz. Az alváros legalsó részein a bűnöző, Silco információkat gyűjt ki Deckardtól, és egy patkányon teszteli a Shimmer néven ismert új mutagént.",
       "hungarianSync": true,
-      "episodeLength": 2580,
+      "episodeLengthSec": 2580,
       "writer": "Christian Linke",
       "releaseDate": "2021-11-6",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode1.png"
@@ -14,7 +14,7 @@
       "episodeName": "Néhány rejtélyt jobb megfejtetlenül hagyni",
       "description": "Kiderül, hogy Jayce, a Piltover akadémiájának diákja volt az, aki megalkotta a mágikus kristályokat, amelyeket Powder és Vi elloptak, és Piltover kormányzótanácsa felkéri, hogy tanúskodjon, mert illegálisan kísérletezett a misztikus mágiával. Mivel gyermekkorában a misztikus varázslat mentette meg, Jayce úgy véli, hogy ez egy új erőforrás lehet Piltover magasabb szintre emelésében, de kizárják az akadémiáról a város veszélyeztetése miatt, és kutatásai várhatóan a szemétbe kerülnek. Jayce meggyőződése azonban megújul, amikor Viktor, az akadémia professzorának, Heimerdingernek a fogyatékkal élő asszisztense felajánlja, hogy segít neki kutatása befejezésében. Zaunba visszatérve Grayson és társa, Marcus nyomást gyakorol Vanderre, hogy fedje fel a rablás valódi tetteseit, más zauni polgárok pedig nyomást gyakorolnak rá, hogy küzdjön vissza a határaikat túllépő végrehajtókkal szemben. Úgy dönt, hogy biztonságban tartja a családját, és semleges marad. Vi nem ért egyet passzivitásával, és végül úgy dönt, hogy feladja magát. Eközben Silco kényszeríti Deckardit, hogy nyeljen le egy bájital Shimmert.",
       "hungarianSync": true,
-      "episodeLength": 2460,
+      "episodeLengthSec": 2460,
       "writer": "Nick Luddington",
       "releaseDate": "2021-11-6",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode2.png"
@@ -24,7 +24,7 @@
       "episodeName": "A változáshoz szükséges alapvető erőszak",
       "description": "Évekkel ezelőtt Silco és Vander olyanok voltak, mint a testvérek, és együtt harcoltak azért, hogy megszabadítsák az alvárost Piltovertől. Minden megváltozott, amikor Vander elárulta Silcót, és megpróbálta belefojtani a folyóba. Manapság Vander megakadályozza, hogy Vi feladja magát. Ezután Silco túszul ejti, miután a mutáns Deckard megöli Graysont és embereit, csak Marcust kímélve. Vi, Mylo és Claggor megmentik, és maguk mögött hagyják Powdert és Ekkot saját biztonságuk érdekében. Piltoverben Jayce és Viktor titokban dolgoznak a kristályokkal Mel Medarda tanácsos belátása szerint, és feltalálnak egy új, rejtélyes technológiát, a Hextech-et. Visszatérve az alvárosba, a testvérek eljutnak Vanderhez, de Silco elvágja őket. Vi megküzd Silco gengsztereivel, de Deckard csúnyán megverte. Por, amely megpróbálja megmenteni, felrobbantja az egyik kristályt egy hatalmas robbanás során, amely megöli Claggort és Mylot. Vander, Silco halálosan megsebesíti, beadja magát Shimmerrel, megöli Deckardot, és végül megmenti Vi-t, mielőtt meghalna. Gyászában Vi megüti Powdert, és dühösen jinx-nek nevezi, mielőtt elmenne. Látja, hogy Silco közeledik, és megpróbál visszatérni a húgához, de Marcus megtámadja és elfogja. A gyásztól sújtott Powder, aki azt hiszi, hogy Vi elhagyta őt, összeomlik Silco karjaiban; átöleli Powdert, és azt mondja neki, hogy Megmutatjuk mindet.",
       "hungarianSync": true,
-      "episodeLength": 2640,
+      "episodeLengthSec": 2640,
       "writer": "Ash Brannon",
       "releaseDate": "2021-11-6",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode3.png"
@@ -34,7 +34,7 @@
       "episodeName": "Boldog haladás napját!",
       "description": "Néhány évvel később a Piltover virágzik a Jayce Hextech technológiájával, és a „Haladás Napja” nevű ünnepen ünnepli fennállásának 200. évfordulóját. Jayce eleinte abban reménykedik, hogy az ünnepségen felfedheti saját és Viktor legújabb drágaköves eszközét, de úgy dönt, hogy nem teszi meg, miután Heimerdinger figyelmezteti őt az esetleges veszélyekre. Máshol, Powder, aki most tinédzser, akit Jinxnek hívnak, a Silcónak dolgozik, és segít neki anyagokat, főleg a Shimmert becsempészni a Piltoverbe. Amikor egy munka balul sül el a Firelights néven ismert alvárosi banda részvételének és Vi rövid hallucinációjának köszönhetően, Jinx megpróbálja lenyűgözni Silcót azzal, hogy ellopja Jayce drágakövét, és robbanást indít el, amiben hat végrehajtó öl meg. Piltover kormányzótanácsa helyet ad Jayce-nak, hogy megvédje népét a lopott drágakőtől. Caitlyn, a tapasztalatlan végrehajtó és Jayce gyerekkori barátja Stillwater börtönbe utazik, hogy információkat gyűjtsön Jinxről Silco egyik gazemberétől. Ehelyett találkozik egy felnőtt Vi-vel, akit Marcus bebörtönzött.",
       "hungarianSync": true,
-      "episodeLength": 2460,
+      "episodeLengthSec": 2460,
       "writer": "David Dunne",
       "releaseDate": "2021-11-13",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode4.png"
@@ -44,7 +44,7 @@
       "episodeName": "Mindenki az ellenségem akar lenni",
       "description": "Vi Zaunnal kapcsolatos szakértelmének és Jinx robbanóanyagainak ismeretének köszönhetően Caitlyn kiengedi a börtönből, és együttműködik vele, hogy megtalálják Silcót. Egy földalatti bordélyházba érve Vi találkozik egy régi kollégájával, és megtudja nővére Silcóval való kapcsolatát. Közben kiderül, hogy Silco segítségével Marcust a végrehajtók seriffjévé léptették elő. Cserébe meg kell engednie, hogy Shimmert becsempészjék, és a Progress Day bombázását és a hextech rablást a Firelightsra kell hibáztatnia. Jinx nem hajlandó dolgozni az új Hextech drágakövön, mert trauma érte, amikor egy hasonló eszközzel megölte a családját, Silco pedig elviszi őt, hogy újjászülethessen a Zaun-tavakba, megkezdve a folyamatot, hogy Powder valóban elfogadja Jinx identitását. Vissza Piltoverbe,",
       "hungarianSync": true,
-      "episodeLength": 2460,
+      "episodeLengthSec": 2460,
       "writer": "Amanda Overton",
       "releaseDate": "2021-11-13",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode5.png"
@@ -54,7 +54,7 @@
       "episodeName": "Amikor ezek a falak leomlanak",
       "description": "Miután Viktor összeesik a laborban betegsége miatt, ő és Jayce elkezdik tanulmányozni a Hexcore-t, egy új Hextech gépet, amely reagál a szerves anyagokra, és potenciálisan meggyógyíthatja őt. Heimerdinger megpróbálja megsemmisíteni a potenciális veszély miatt, ami arra készteti Jayce-t, hogy elárulja őt, és megszervezi a kirúgást a tanácsból. Viktor felkeresi Singedet, gyerekkori mentorát, hogy segítsen tökéletesíteni a Hexcore-t. Marcust Silco utasítja, hogy ölje meg Caitlynt és Vi-t, és mivel tudja, hogy ez a konfliktus csatához fog vezetni Zaunnal, előkészíti Piltover védelmét. A föld alatt Vi és Caitlyn egy biztonságos házat találnak, hogy Vi felépülhessen a Sevikával (Silco másodparancsnokával) vívott harcból, de Silco rájuk talál, miután Shimmerrel megvesztegette a helyieket. A párnak sikerül megszöknie. Nemrég értesült Vi visszatéréséről, Jinx felgyújtja azt a fáklyát, amelyet Vi adott neki gyerekkorukban. Vi észreveszi, és a két nővér újra találkozik, bár Caitlyn jelenléte és a Firelights hirtelen megjelenése miatt ez rövid életű, akik ellopják a drágakövet, és elrabolják Caitlynt és Vi-t.",
       "hungarianSync": true,
-      "episodeLength": 2520,
+      "episodeLengthSec": 2520,
       "writer": "Alex Yee",
       "releaseDate": "2021-11-13",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode6.png"
@@ -64,7 +64,7 @@
       "episodeName": "A fiú megváltó",
       "description": "A Firelights vezetőjéről kiderül, hogy Ekko, aki mogorva és harcedzett lett azóta, hogy Vander halála után egyedül nőtt fel. Elmagyarázza Vi-nek, hogy Powder eltűnt, és csak Jinx maradt, akit Silcónak szenteltek, miközben ő volt az élen abban, hogy Shimmert távol tartsák az utcákról. Jinx dühös Silcóra, amiért eltitkolta Vi visszatérését, de ráveszi, hogy folytassa az akaratát. A két város közötti növekvő zavargások után Mel meggyőzi Jayce-t, hogy dolgozzon a Hextech fegyvereken. Singed javaslatára Viktor a Shimmert használja, hogy lehetővé tegye a Hexcore számára, hogy módosítsa meghibásodott testét, miközben egyre távolodik a megbízhatatlan Jayce-től. Ekko és Caitlyn megpróbálják visszavinni a drágakövet Piltoverbe, találkoznak Marcusszal egy hídon, míg Vi visszatér Jinxet keresni. Miután Marcus elárulta Caitlynt, Vi visszamegy, hogy segítsen neki, és meggyőzi a bámészkodó Jinxet, hogy elárulta Caitlyn miatt. Jinx egy hatalmas robotrovarrajt robbant fel a hídon, megöli Marcust és a végrehajtókat, valamint megsebesíti Caitlynt. Ekko visszatartja Jinxet, miközben Caitlyn és Vi visszavonul Piltoverbe; megveri, de nem tudja leadni az utolsó ütést, így Jinx felrobbant egy gránátot a közelükben.",
       "hungarianSync": true,
-      "episodeLength": 2400,
+      "episodeLengthSec": 2400,
       "writer": "Nick Luddington",
       "releaseDate": "2021-11-20",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode7.png"
@@ -74,7 +74,7 @@
       "episodeName": "Olaj és víz",
       "description": "Silco megtalálja Jinxet az Ekkoval folytatott harca után, és rájön, hogy sikerült visszalopnia a Hextech drágakövet. Elviszi Singedbe, hogy begyógyítsa a sebeit. Miközben Jinx elviseli a sebek kezelését, hallucinálja, hogy Vi és Caitlyn okozza a fájdalmat, és a szeme ibolyaszínűvé válik, amikor Singed hatalmas mennyiségű Shimmert fecskendez a testébe. Eközben Mel édesanyja megérkezik Piltoverbe Mel testvérének meggyilkolása után, és megpróbálja felkészíteni őt a Zaunnal dúló háborúra. Miután erőszakkal visszavonták a tanácsból, Heimerdinger felkeresi Zaunt, hogy segítsen a küszködő helyieknek, és találkozik Ekkoval, aki eltörte a lábát Jinx gránátjától. Viktor erőfeszítései, hogy meggyógyítsa a testét a Hexcore segítségével, lehetővé teszi számára, hogy meggyógyítsa a lábát, és először futhasson. hanem gyerekkori barátja és asszisztense Sky halálát is eredményezi. Miután a tanácsnak tett tanúvallomása nem tudta meggyőzni őket arról, hogy Silco fenyegetést jelent, Vi együttműködik Jayce-szel, hogy leállítsák Silco Shimmer gyárait. Hextech fegyverekkel felfegyverkezve legyőzik a Shimmerrel feljavított katonák seregét, de közben Jayce véletlenül megöl egy gyermekmunkást. Caitlynt elhagyta Vi, aki azt állította, hogy „olyanok, mint az olaj és a víz”, Jinx elrabolja.",
       "hungarianSync": true,
-      "episodeLength": 2400,
+      "episodeLengthSec": 2400,
       "writer": "Ben St. John és Mollie St. John",
       "releaseDate": "2021-11-20",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode8.png"
@@ -84,7 +84,7 @@
       "episodeName": "Az általad alkotott szörny",
       "description": "A katasztrofális razzia után Jayce felismeri a városon belüli háború lehetséges költségeit, és elhatározza, hogy békewriterdést köt Silcóval, felajánlva Zaun függetlenségét Jinxért cserébe. Ekko felfedi búvóhelyét Heimerdingernek, és elkezdenek dolgozni, hogy együtt segítsenek az alvárosban. Viktor Sky halála miatti bűntudata kis híján öngyilkosságba kergeti, mielőtt Jayce közbelép. Megértve a Hextech által jelentett veszélyt, megígéri Jayce-vel, hogy elpusztítja a Hexcore-t. Silco nehezményezi, hogy Zaun és Jinx között kell választania Vander szobrához, ahol Jinx titokban hallgat. Vi legyőzi Sevikát, de ezt követően Jinx elrabolja. Vi egy asztalnál ébred, ahol Silco és Caitlyn is visszafogott. Jinx pisztolyt ad Vi-nek, és azt mondja neki, hogy válasszon Caitlyn és önmaga között. Caitlyn kiszabadítja magát, és megpróbálja leigázni Jinxet, de az utóbbi kiüti. Vi és Silco egyaránt fellebbez Jinxnek, ami miatt Jinx szenved atraumás támadás . Silco kiszabadul, és majdnem lelövi Vi-t, mire Jinx mániákus rohamban lelövi. Utolsó pillanataiban Silco vigasztalta, aki megerősíti iránta érzett szerelmét, mielőtt meghalna, Jinx végre elfogadja új személyazonosságát, és elismeri, hogy ő és Vi eltávolodott egymástól. Miután a Hextech drágakövet rakétavetővé fegyverezte, Jinx elsüti a fegyvert a Piltoveri tanácsteremben, miközben a tanács jóváhagyja Jayce javaslatát, hogy biztosítsa Zaun függetlenségét.",
       "hungarianSync": true,
-      "episodeLength": 2340,
+      "episodeLengthSec": 2340,
       "writer": "Christian Linke és Alex Yee",
       "releaseDate": "2021-11-20",
       "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode9.png"
