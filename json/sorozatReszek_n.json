@@ -7,7 +7,7 @@
       "episodeLengthSec": 2580,
       "writer": "Christian Linke",
       "releaseDate": "2021-11-6",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode1.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode1.jpg"
     },
     {
       "_id": 2,
@@ -17,7 +17,7 @@
       "episodeLengthSec": 2460,
       "writer": "Nick Luddington",
       "releaseDate": "2021-11-6",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode2.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode2.jpg"
     },
     {
       "_id": 3,
@@ -27,7 +27,7 @@
       "episodeLengthSec": 2640,
       "writer": "Ash Brannon",
       "releaseDate": "2021-11-6",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode3.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode3.jpg"
     },
     {
       "_id": 4,
@@ -37,7 +37,7 @@
       "episodeLengthSec": 2460,
       "writer": "David Dunne",
       "releaseDate": "2021-11-13",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode4.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode4.jpg"
     },
     {
       "_id": 5,
@@ -47,7 +47,7 @@
       "episodeLengthSec": 2460,
       "writer": "Amanda Overton",
       "releaseDate": "2021-11-13",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode5.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode5.jpg"
     },
     {
       "_id": 6,
@@ -57,7 +57,7 @@
       "episodeLengthSec": 2520,
       "writer": "Alex Yee",
       "releaseDate": "2021-11-13",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode6.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode6.jpg"
     },
     {
       "_id": 7,
@@ -67,7 +67,7 @@
       "episodeLengthSec": 2400,
       "writer": "Nick Luddington",
       "releaseDate": "2021-11-20",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode7.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode7.jpg"
     },
     {
       "_id": 8,
@@ -77,7 +77,7 @@
       "episodeLengthSec": 2400,
       "writer": "Ben St. John és Mollie St. John",
       "releaseDate": "2021-11-20",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode8.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode8.jpg"
     },
     {
       "_id": 9,
@@ -87,6 +87,6 @@
       "episodeLengthSec": 2340,
       "writer": "Christian Linke és Alex Yee",
       "releaseDate": "2021-11-20",
-      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode9.png"
+      "pictureUrl": "http://elit.jedlik.eu/nits/arcane/episode9.jpg"
     }
   ]
