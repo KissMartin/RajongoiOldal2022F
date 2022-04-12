@@ -1,0 +1,47 @@
+[
+    {
+      "_id": 1,
+      "inChapter": 1,
+      "watched": true
+    },
+    {
+      "_id": 2,
+      "inChapter": 1,
+      "watched": false
+    },
+    {
+      "_id": 3,
+      "inChapter": 1,
+      "watched": false
+    },
+    {
+      "_id": 4,
+      "inChapter": 2,
+      "watched": false
+    },
+    {
+      "_id": 5,
+      "inChapter": 2,
+      "watched": false
+    },
+    {
+      "_id": 6,
+      "inChapter": 2,
+      "watched": false
+    },
+    {
+      "_id": 7,
+      "inChapter": 3,
+      "watched": false
+    },
+    {
+      "_id": 8,
+      "inChapter": 3,
+      "watched": false
+    },
+    {
+      "_id": 9,
+      "inChapter": 3,
+      "watched": false
+    }
+  ]
